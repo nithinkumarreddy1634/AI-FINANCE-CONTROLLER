@@ -1,0 +1,501 @@
+order_id,transaction_id,exception_type,expected_decision,expected_action,expected_match,ground_truth_note
+EVAL_0001,TXN_EVAL_0001,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0002,TXN_EVAL_0002,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0003,TXN_EVAL_0003,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0004,TXN_EVAL_0004,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0005,TXN_EVAL_0005,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0006,TXN_EVAL_0006,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0007,TXN_EVAL_0007,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0008,TXN_EVAL_0008,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0009,TXN_EVAL_0009,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0010,TXN_EVAL_0010,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0011,TXN_EVAL_0011,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0012,TXN_EVAL_0012,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0013,TXN_EVAL_0013,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0014,TXN_EVAL_0014,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0015,TXN_EVAL_0015,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0016,TXN_EVAL_0016,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0017,TXN_EVAL_0017,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0018,TXN_EVAL_0018,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0019,TXN_EVAL_0019,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0020,TXN_EVAL_0020,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0021,TXN_EVAL_0021,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0022,TXN_EVAL_0022,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0023,TXN_EVAL_0023,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0024,TXN_EVAL_0024,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0025,TXN_EVAL_0025,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0026,TXN_EVAL_0026,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0027,TXN_EVAL_0027,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0028,TXN_EVAL_0028,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0029,TXN_EVAL_0029,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0030,TXN_EVAL_0030,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0031,TXN_EVAL_0031,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0032,TXN_EVAL_0032,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0033,TXN_EVAL_0033,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0034,TXN_EVAL_0034,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0035,TXN_EVAL_0035,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0036,TXN_EVAL_0036,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0037,TXN_EVAL_0037,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0038,TXN_EVAL_0038,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0039,TXN_EVAL_0039,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0040,TXN_EVAL_0040,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0041,TXN_EVAL_0041,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0042,TXN_EVAL_0042,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0043,TXN_EVAL_0043,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0044,TXN_EVAL_0044,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0045,TXN_EVAL_0045,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0046,TXN_EVAL_0046,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0047,TXN_EVAL_0047,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0048,TXN_EVAL_0048,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0049,TXN_EVAL_0049,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0050,TXN_EVAL_0050,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0051,TXN_EVAL_0051,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0052,TXN_EVAL_0052,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0053,TXN_EVAL_0053,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0054,TXN_EVAL_0054,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0055,TXN_EVAL_0055,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0056,TXN_EVAL_0056,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0057,TXN_EVAL_0057,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0058,TXN_EVAL_0058,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0059,TXN_EVAL_0059,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0060,TXN_EVAL_0060,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0061,TXN_EVAL_0061,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0062,TXN_EVAL_0062,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0063,TXN_EVAL_0063,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0064,TXN_EVAL_0064,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0065,TXN_EVAL_0065,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0066,TXN_EVAL_0066,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0067,TXN_EVAL_0067,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0068,TXN_EVAL_0068,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0069,TXN_EVAL_0069,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0070,TXN_EVAL_0070,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0071,TXN_EVAL_0071,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0072,TXN_EVAL_0072,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0073,TXN_EVAL_0073,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0074,TXN_EVAL_0074,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0075,TXN_EVAL_0075,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0076,TXN_EVAL_0076,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0077,TXN_EVAL_0077,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0078,TXN_EVAL_0078,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0079,TXN_EVAL_0079,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0080,TXN_EVAL_0080,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0081,TXN_EVAL_0081,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0082,TXN_EVAL_0082,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0083,TXN_EVAL_0083,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0084,TXN_EVAL_0084,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0085,TXN_EVAL_0085,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0086,TXN_EVAL_0086,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0087,TXN_EVAL_0087,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0088,TXN_EVAL_0088,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0089,TXN_EVAL_0089,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0090,TXN_EVAL_0090,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0091,TXN_EVAL_0091,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0092,TXN_EVAL_0092,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0093,TXN_EVAL_0093,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0094,TXN_EVAL_0094,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0095,TXN_EVAL_0095,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0096,TXN_EVAL_0096,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0097,TXN_EVAL_0097,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0098,TXN_EVAL_0098,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0099,TXN_EVAL_0099,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0100,TXN_EVAL_0100,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0101,TXN_EVAL_0101,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0102,TXN_EVAL_0102,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0103,TXN_EVAL_0103,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0104,TXN_EVAL_0104,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0105,TXN_EVAL_0105,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0106,TXN_EVAL_0106,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0107,TXN_EVAL_0107,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0108,TXN_EVAL_0108,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0109,TXN_EVAL_0109,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0110,TXN_EVAL_0110,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0111,TXN_EVAL_0111,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0112,TXN_EVAL_0112,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0113,TXN_EVAL_0113,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0114,TXN_EVAL_0114,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0115,TXN_EVAL_0115,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0116,TXN_EVAL_0116,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0117,TXN_EVAL_0117,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0118,TXN_EVAL_0118,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0119,TXN_EVAL_0119,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0120,TXN_EVAL_0120,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0121,TXN_EVAL_0121,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0122,TXN_EVAL_0122,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0123,TXN_EVAL_0123,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0124,TXN_EVAL_0124,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0125,TXN_EVAL_0125,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0126,TXN_EVAL_0126,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0127,TXN_EVAL_0127,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0128,TXN_EVAL_0128,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0129,TXN_EVAL_0129,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0130,TXN_EVAL_0130,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0131,TXN_EVAL_0131,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0132,TXN_EVAL_0132,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0133,TXN_EVAL_0133,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0134,TXN_EVAL_0134,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0135,TXN_EVAL_0135,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0136,TXN_EVAL_0136,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0137,TXN_EVAL_0137,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0138,TXN_EVAL_0138,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0139,TXN_EVAL_0139,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0140,TXN_EVAL_0140,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0141,TXN_EVAL_0141,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0142,TXN_EVAL_0142,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0143,TXN_EVAL_0143,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0144,TXN_EVAL_0144,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0145,TXN_EVAL_0145,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0146,TXN_EVAL_0146,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0147,TXN_EVAL_0147,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0148,TXN_EVAL_0148,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0149,TXN_EVAL_0149,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0150,TXN_EVAL_0150,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0151,TXN_EVAL_0151,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0152,TXN_EVAL_0152,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0153,TXN_EVAL_0153,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0154,TXN_EVAL_0154,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0155,TXN_EVAL_0155,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0156,TXN_EVAL_0156,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0157,TXN_EVAL_0157,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0158,TXN_EVAL_0158,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0159,TXN_EVAL_0159,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0160,TXN_EVAL_0160,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0161,TXN_EVAL_0161,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0162,TXN_EVAL_0162,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0163,TXN_EVAL_0163,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0164,TXN_EVAL_0164,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0165,TXN_EVAL_0165,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0166,TXN_EVAL_0166,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0167,TXN_EVAL_0167,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0168,TXN_EVAL_0168,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0169,TXN_EVAL_0169,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0170,TXN_EVAL_0170,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0171,TXN_EVAL_0171,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0172,TXN_EVAL_0172,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0173,TXN_EVAL_0173,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0174,TXN_EVAL_0174,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0175,TXN_EVAL_0175,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0176,TXN_EVAL_0176,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0177,TXN_EVAL_0177,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0178,TXN_EVAL_0178,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0179,TXN_EVAL_0179,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0180,TXN_EVAL_0180,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0181,TXN_EVAL_0181,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0182,TXN_EVAL_0182,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0183,TXN_EVAL_0183,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0184,TXN_EVAL_0184,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0185,TXN_EVAL_0185,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0186,TXN_EVAL_0186,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0187,TXN_EVAL_0187,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0188,TXN_EVAL_0188,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0189,TXN_EVAL_0189,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0190,TXN_EVAL_0190,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0191,TXN_EVAL_0191,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0192,TXN_EVAL_0192,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0193,TXN_EVAL_0193,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0194,TXN_EVAL_0194,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0195,TXN_EVAL_0195,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0196,TXN_EVAL_0196,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0197,TXN_EVAL_0197,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0198,TXN_EVAL_0198,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0199,TXN_EVAL_0199,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0200,TXN_EVAL_0200,EXACT_MATCH,LIKELY_MATCH,AUTO_RECONCILE,True,"Exact match across order, payment, and bank settlement."
+EVAL_0201,TXN_EVAL_0201,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹9090.51 vs expected ₹10100.57.
+EVAL_0202,TXN_EVAL_0202,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹6095.39 vs expected ₹6772.65.
+EVAL_0203,TXN_EVAL_0203,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹4661.15 vs expected ₹5179.06.
+EVAL_0204,TXN_EVAL_0204,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹11637.13 vs expected ₹12930.14.
+EVAL_0205,TXN_EVAL_0205,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹2756.5 vs expected ₹3062.78.
+EVAL_0206,TXN_EVAL_0206,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹3323.23 vs expected ₹3692.48.
+EVAL_0207,TXN_EVAL_0207,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹10352.67 vs expected ₹11502.97.
+EVAL_0208,TXN_EVAL_0208,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹11302.66 vs expected ₹12558.51.
+EVAL_0209,TXN_EVAL_0209,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹3228.03 vs expected ₹3586.7.
+EVAL_0210,TXN_EVAL_0210,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹7843.73 vs expected ₹8715.26.
+EVAL_0211,TXN_EVAL_0211,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹6078.41 vs expected ₹6753.79.
+EVAL_0212,TXN_EVAL_0212,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹4626.45 vs expected ₹5140.5.
+EVAL_0213,TXN_EVAL_0213,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹3890.28 vs expected ₹4322.53.
+EVAL_0214,TXN_EVAL_0214,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹3949.7 vs expected ₹4388.56.
+EVAL_0215,TXN_EVAL_0215,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹7774.97 vs expected ₹8638.85.
+EVAL_0216,TXN_EVAL_0216,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹4279.78 vs expected ₹4755.31.
+EVAL_0217,TXN_EVAL_0217,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹5686.24 vs expected ₹6318.05.
+EVAL_0218,TXN_EVAL_0218,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹9799.83 vs expected ₹10888.7.
+EVAL_0219,TXN_EVAL_0219,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹4845.73 vs expected ₹5384.14.
+EVAL_0220,TXN_EVAL_0220,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹12493.76 vs expected ₹13881.96.
+EVAL_0221,TXN_EVAL_0221,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹12883.09 vs expected ₹14314.55.
+EVAL_0222,TXN_EVAL_0222,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹7580.66 vs expected ₹8422.96.
+EVAL_0223,TXN_EVAL_0223,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹5045.7 vs expected ₹5606.33.
+EVAL_0224,TXN_EVAL_0224,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹12493.73 vs expected ₹13881.92.
+EVAL_0225,TXN_EVAL_0225,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹587.22 vs expected ₹652.47.
+EVAL_0226,TXN_EVAL_0226,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹3740.87 vs expected ₹4156.52.
+EVAL_0227,TXN_EVAL_0227,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹8858.99 vs expected ₹9843.32.
+EVAL_0228,TXN_EVAL_0228,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹10917.27 vs expected ₹12130.3.
+EVAL_0229,TXN_EVAL_0229,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹4870.64 vs expected ₹5411.82.
+EVAL_0230,TXN_EVAL_0230,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹3319.32 vs expected ₹3688.13.
+EVAL_0231,TXN_EVAL_0231,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹11567.2 vs expected ₹12852.44.
+EVAL_0232,TXN_EVAL_0232,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹682.14 vs expected ₹757.93.
+EVAL_0233,TXN_EVAL_0233,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹6415.63 vs expected ₹7128.48.
+EVAL_0234,TXN_EVAL_0234,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹8673.71 vs expected ₹9637.46.
+EVAL_0235,TXN_EVAL_0235,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹9486.26 vs expected ₹10540.29.
+EVAL_0236,TXN_EVAL_0236,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹598.68 vs expected ₹665.2.
+EVAL_0237,TXN_EVAL_0237,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹4756.28 vs expected ₹5284.76.
+EVAL_0238,TXN_EVAL_0238,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹3143.14 vs expected ₹3492.38.
+EVAL_0239,TXN_EVAL_0239,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹9656.98 vs expected ₹10729.98.
+EVAL_0240,TXN_EVAL_0240,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹5892.36 vs expected ₹6547.07.
+EVAL_0241,TXN_EVAL_0241,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹8137.24 vs expected ₹9041.38.
+EVAL_0242,TXN_EVAL_0242,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹819.37 vs expected ₹910.41.
+EVAL_0243,TXN_EVAL_0243,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹2867.62 vs expected ₹3186.24.
+EVAL_0244,TXN_EVAL_0244,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹13349.93 vs expected ₹14833.26.
+EVAL_0245,TXN_EVAL_0245,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹9102.82 vs expected ₹10114.24.
+EVAL_0246,TXN_EVAL_0246,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹4597.53 vs expected ₹5108.37.
+EVAL_0247,TXN_EVAL_0247,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹6822.52 vs expected ₹7580.58.
+EVAL_0248,TXN_EVAL_0248,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹929.13 vs expected ₹1032.37.
+EVAL_0249,TXN_EVAL_0249,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹734.15 vs expected ₹815.72.
+EVAL_0250,TXN_EVAL_0250,PARTIAL_PAYMENT,PARTIAL_MATCH,MARK_FOR_REVIEW,False,Partial payment received: ₹3762.78 vs expected ₹4180.87.
+EVAL_0251,TXN_EVAL_0251,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹3263.23 vs expected ₹3381.64.
+EVAL_0252,TXN_EVAL_0252,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹6194.36 vs expected ₹6298.93.
+EVAL_0253,TXN_EVAL_0253,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹12781.07 vs expected ₹13012.54.
+EVAL_0254,TXN_EVAL_0254,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹7696.87 vs expected ₹7879.94.
+EVAL_0255,TXN_EVAL_0255,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹14520.87 vs expected ₹14724.97.
+EVAL_0256,TXN_EVAL_0256,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹14430.62 vs expected ₹14629.58.
+EVAL_0257,TXN_EVAL_0257,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹9938.07 vs expected ₹10078.09.
+EVAL_0258,TXN_EVAL_0258,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹12927.15 vs expected ₹13020.74.
+EVAL_0259,TXN_EVAL_0259,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹7902.15 vs expected ₹8047.86.
+EVAL_0260,TXN_EVAL_0260,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹14646.29 vs expected ₹14703.51.
+EVAL_0261,TXN_EVAL_0261,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹6456.46 vs expected ₹6720.33.
+EVAL_0262,TXN_EVAL_0262,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹3298.2 vs expected ₹3563.53.
+EVAL_0263,TXN_EVAL_0263,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹7394.74 vs expected ₹7584.46.
+EVAL_0264,TXN_EVAL_0264,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹5561.59 vs expected ₹5774.31.
+EVAL_0265,TXN_EVAL_0265,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹10931.94 vs expected ₹11029.2.
+EVAL_0266,TXN_EVAL_0266,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹10631.58 vs expected ₹10719.86.
+EVAL_0267,TXN_EVAL_0267,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹11811.28 vs expected ₹12061.07.
+EVAL_0268,TXN_EVAL_0268,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹11860.51 vs expected ₹12126.87.
+EVAL_0269,TXN_EVAL_0269,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹4585.56 vs expected ₹4840.47.
+EVAL_0270,TXN_EVAL_0270,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹14241.74 vs expected ₹14464.98.
+EVAL_0271,TXN_EVAL_0271,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹2717.02 vs expected ₹2940.27.
+EVAL_0272,TXN_EVAL_0272,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹10205.45 vs expected ₹10358.93.
+EVAL_0273,TXN_EVAL_0273,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹13440.16 vs expected ₹13729.52.
+EVAL_0274,TXN_EVAL_0274,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹7689.36 vs expected ₹7961.37.
+EVAL_0275,TXN_EVAL_0275,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹10214.02 vs expected ₹10365.72.
+EVAL_0276,TXN_EVAL_0276,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹10804.78 vs expected ₹10864.85.
+EVAL_0277,TXN_EVAL_0277,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹1676.01 vs expected ₹1872.51.
+EVAL_0278,TXN_EVAL_0278,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹12180.8 vs expected ₹12295.11.
+EVAL_0279,TXN_EVAL_0279,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹2777.42 vs expected ₹2875.25.
+EVAL_0280,TXN_EVAL_0280,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹6472.9 vs expected ₹6631.18.
+EVAL_0281,TXN_EVAL_0281,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹3780.84 vs expected ₹3996.25.
+EVAL_0282,TXN_EVAL_0282,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹5715.1 vs expected ₹5899.07.
+EVAL_0283,TXN_EVAL_0283,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹10791.24 vs expected ₹10956.09.
+EVAL_0284,TXN_EVAL_0284,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹3405.95 vs expected ₹3533.13.
+EVAL_0285,TXN_EVAL_0285,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹13869.52 vs expected ₹14059.27.
+EVAL_0286,TXN_EVAL_0286,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹13138.53 vs expected ₹13241.29.
+EVAL_0287,TXN_EVAL_0287,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹11324.29 vs expected ₹11462.77.
+EVAL_0288,TXN_EVAL_0288,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹10395.92 vs expected ₹10474.71.
+EVAL_0289,TXN_EVAL_0289,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹6512.14 vs expected ₹6787.01.
+EVAL_0290,TXN_EVAL_0290,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹8343.88 vs expected ₹8430.1.
+EVAL_0291,TXN_EVAL_0291,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹4161.83 vs expected ₹4396.61.
+EVAL_0292,TXN_EVAL_0292,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹7245.28 vs expected ₹7410.33.
+EVAL_0293,TXN_EVAL_0293,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹7494.0 vs expected ₹7578.49.
+EVAL_0294,TXN_EVAL_0294,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹8322.46 vs expected ₹8614.88.
+EVAL_0295,TXN_EVAL_0295,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹9125.59 vs expected ₹9323.85.
+EVAL_0296,TXN_EVAL_0296,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹8384.08 vs expected ₹8622.81.
+EVAL_0297,TXN_EVAL_0297,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹7047.84 vs expected ₹7184.33.
+EVAL_0298,TXN_EVAL_0298,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹7935.68 vs expected ₹8118.26.
+EVAL_0299,TXN_EVAL_0299,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹4732.85 vs expected ₹4802.99.
+EVAL_0300,TXN_EVAL_0300,AMOUNT_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Amount mismatch: Bank received ₹7987.63 vs expected ₹8150.74.
+EVAL_0301,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0302,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0303,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0304,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0305,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0306,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0307,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0308,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0309,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0310,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0311,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0312,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0313,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0314,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0315,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0316,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0317,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0318,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0319,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0320,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0321,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0322,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0323,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0324,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0325,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0326,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0327,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0328,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0329,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0330,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0331,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0332,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0333,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0334,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0335,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0336,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0337,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0338,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0339,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0340,,MISSING_PAYMENT,UNRESOLVED,ESCALATE,False,No gateway payment record exists.
+EVAL_0341,TXN_EVAL_0341,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0342,TXN_EVAL_0342,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0343,TXN_EVAL_0343,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0344,TXN_EVAL_0344,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0345,TXN_EVAL_0345,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0346,TXN_EVAL_0346,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0347,TXN_EVAL_0347,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0348,TXN_EVAL_0348,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0349,TXN_EVAL_0349,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0350,TXN_EVAL_0350,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0351,TXN_EVAL_0351,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0352,TXN_EVAL_0352,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0353,TXN_EVAL_0353,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0354,TXN_EVAL_0354,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0355,TXN_EVAL_0355,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0356,TXN_EVAL_0356,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0357,TXN_EVAL_0357,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0358,TXN_EVAL_0358,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0359,TXN_EVAL_0359,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0360,TXN_EVAL_0360,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0361,TXN_EVAL_0361,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0362,TXN_EVAL_0362,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0363,TXN_EVAL_0363,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0364,TXN_EVAL_0364,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0365,TXN_EVAL_0365,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0366,TXN_EVAL_0366,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0367,TXN_EVAL_0367,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0368,TXN_EVAL_0368,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0369,TXN_EVAL_0369,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0370,TXN_EVAL_0370,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0371,TXN_EVAL_0371,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0372,TXN_EVAL_0372,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0373,TXN_EVAL_0373,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0374,TXN_EVAL_0374,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0375,TXN_EVAL_0375,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0376,TXN_EVAL_0376,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0377,TXN_EVAL_0377,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0378,TXN_EVAL_0378,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0379,TXN_EVAL_0379,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0380,TXN_EVAL_0380,MISSING_BANK_TRANSACTION,UNRESOLVED,ESCALATE,False,No bank settlement transaction credit exists.
+EVAL_0381,TXN_EVAL_0381,DUPLICATE_TRANSACTION,UNRESOLVED,MARK_FOR_REVIEW,False,Duplicate bank settlement credit detected.
+EVAL_0382,TXN_EVAL_0382,DUPLICATE_TRANSACTION,UNRESOLVED,MARK_FOR_REVIEW,False,Duplicate bank settlement credit detected.
+EVAL_0383,TXN_EVAL_0383,DUPLICATE_TRANSACTION,UNRESOLVED,MARK_FOR_REVIEW,False,Duplicate bank settlement credit detected.
+EVAL_0384,TXN_EVAL_0384,DUPLICATE_TRANSACTION,UNRESOLVED,MARK_FOR_REVIEW,False,Duplicate bank settlement credit detected.
+EVAL_0385,TXN_EVAL_0385,DUPLICATE_TRANSACTION,UNRESOLVED,MARK_FOR_REVIEW,False,Duplicate bank settlement credit detected.
+EVAL_0386,TXN_EVAL_0386,DUPLICATE_TRANSACTION,UNRESOLVED,MARK_FOR_REVIEW,False,Duplicate bank settlement credit detected.
+EVAL_0387,TXN_EVAL_0387,DUPLICATE_TRANSACTION,UNRESOLVED,MARK_FOR_REVIEW,False,Duplicate bank settlement credit detected.
+EVAL_0388,TXN_EVAL_0388,DUPLICATE_TRANSACTION,UNRESOLVED,MARK_FOR_REVIEW,False,Duplicate bank settlement credit detected.
+EVAL_0389,TXN_EVAL_0389,DUPLICATE_TRANSACTION,UNRESOLVED,MARK_FOR_REVIEW,False,Duplicate bank settlement credit detected.
+EVAL_0390,TXN_EVAL_0390,DUPLICATE_TRANSACTION,UNRESOLVED,MARK_FOR_REVIEW,False,Duplicate bank settlement credit detected.
+EVAL_0391,TXN_EVAL_0391,DUPLICATE_TRANSACTION,UNRESOLVED,MARK_FOR_REVIEW,False,Duplicate bank settlement credit detected.
+EVAL_0392,TXN_EVAL_0392,DUPLICATE_TRANSACTION,UNRESOLVED,MARK_FOR_REVIEW,False,Duplicate bank settlement credit detected.
+EVAL_0393,TXN_EVAL_0393,DUPLICATE_TRANSACTION,UNRESOLVED,MARK_FOR_REVIEW,False,Duplicate bank settlement credit detected.
+EVAL_0394,TXN_EVAL_0394,DUPLICATE_TRANSACTION,UNRESOLVED,MARK_FOR_REVIEW,False,Duplicate bank settlement credit detected.
+EVAL_0395,TXN_EVAL_0395,DUPLICATE_TRANSACTION,UNRESOLVED,MARK_FOR_REVIEW,False,Duplicate bank settlement credit detected.
+EVAL_0396,TXN_EVAL_0396,DUPLICATE_TRANSACTION,UNRESOLVED,MARK_FOR_REVIEW,False,Duplicate bank settlement credit detected.
+EVAL_0397,TXN_EVAL_0397,DUPLICATE_TRANSACTION,UNRESOLVED,MARK_FOR_REVIEW,False,Duplicate bank settlement credit detected.
+EVAL_0398,TXN_EVAL_0398,DUPLICATE_TRANSACTION,UNRESOLVED,MARK_FOR_REVIEW,False,Duplicate bank settlement credit detected.
+EVAL_0399,TXN_EVAL_0399,DUPLICATE_TRANSACTION,UNRESOLVED,MARK_FOR_REVIEW,False,Duplicate bank settlement credit detected.
+EVAL_0400,TXN_EVAL_0400,DUPLICATE_TRANSACTION,UNRESOLVED,MARK_FOR_REVIEW,False,Duplicate bank settlement credit detected.
+EVAL_0401,TXN_EVAL_0401,DUPLICATE_TRANSACTION,UNRESOLVED,MARK_FOR_REVIEW,False,Duplicate bank settlement credit detected.
+EVAL_0402,TXN_EVAL_0402,DUPLICATE_TRANSACTION,UNRESOLVED,MARK_FOR_REVIEW,False,Duplicate bank settlement credit detected.
+EVAL_0403,TXN_EVAL_0403,DUPLICATE_TRANSACTION,UNRESOLVED,MARK_FOR_REVIEW,False,Duplicate bank settlement credit detected.
+EVAL_0404,TXN_EVAL_0404,DUPLICATE_TRANSACTION,UNRESOLVED,MARK_FOR_REVIEW,False,Duplicate bank settlement credit detected.
+EVAL_0405,TXN_EVAL_0405,DUPLICATE_TRANSACTION,UNRESOLVED,MARK_FOR_REVIEW,False,Duplicate bank settlement credit detected.
+EVAL_0406,TXN_EVAL_0406,DUPLICATE_TRANSACTION,UNRESOLVED,MARK_FOR_REVIEW,False,Duplicate bank settlement credit detected.
+EVAL_0407,TXN_EVAL_0407,DUPLICATE_TRANSACTION,UNRESOLVED,MARK_FOR_REVIEW,False,Duplicate bank settlement credit detected.
+EVAL_0408,TXN_EVAL_0408,DUPLICATE_TRANSACTION,UNRESOLVED,MARK_FOR_REVIEW,False,Duplicate bank settlement credit detected.
+EVAL_0409,TXN_EVAL_0409,DUPLICATE_TRANSACTION,UNRESOLVED,MARK_FOR_REVIEW,False,Duplicate bank settlement credit detected.
+EVAL_0410,TXN_EVAL_0410,DUPLICATE_TRANSACTION,UNRESOLVED,MARK_FOR_REVIEW,False,Duplicate bank settlement credit detected.
+EVAL_0411,TXN_EVAL_0411,DATE_MISMATCH,LIKELY_MATCH,MARK_FOR_REVIEW,True,Settlement date lag within acceptable 3-day policy window.
+EVAL_0412,TXN_EVAL_0412,DATE_MISMATCH,LIKELY_MATCH,MARK_FOR_REVIEW,True,Settlement date lag within acceptable 3-day policy window.
+EVAL_0413,TXN_EVAL_0413,DATE_MISMATCH,LIKELY_MATCH,MARK_FOR_REVIEW,True,Settlement date lag within acceptable 3-day policy window.
+EVAL_0414,TXN_EVAL_0414,DATE_MISMATCH,LIKELY_MATCH,MARK_FOR_REVIEW,True,Settlement date lag within acceptable 3-day policy window.
+EVAL_0415,TXN_EVAL_0415,DATE_MISMATCH,LIKELY_MATCH,MARK_FOR_REVIEW,True,Settlement date lag within acceptable 3-day policy window.
+EVAL_0416,TXN_EVAL_0416,DATE_MISMATCH,LIKELY_MATCH,MARK_FOR_REVIEW,True,Settlement date lag within acceptable 3-day policy window.
+EVAL_0417,TXN_EVAL_0417,DATE_MISMATCH,LIKELY_MATCH,MARK_FOR_REVIEW,True,Settlement date lag within acceptable 3-day policy window.
+EVAL_0418,TXN_EVAL_0418,DATE_MISMATCH,LIKELY_MATCH,MARK_FOR_REVIEW,True,Settlement date lag within acceptable 3-day policy window.
+EVAL_0419,TXN_EVAL_0419,DATE_MISMATCH,LIKELY_MATCH,MARK_FOR_REVIEW,True,Settlement date lag within acceptable 3-day policy window.
+EVAL_0420,TXN_EVAL_0420,DATE_MISMATCH,LIKELY_MATCH,MARK_FOR_REVIEW,True,Settlement date lag within acceptable 3-day policy window.
+EVAL_0421,TXN_EVAL_0421,DATE_MISMATCH,LIKELY_MATCH,MARK_FOR_REVIEW,True,Settlement date lag within acceptable 3-day policy window.
+EVAL_0422,TXN_EVAL_0422,DATE_MISMATCH,LIKELY_MATCH,MARK_FOR_REVIEW,True,Settlement date lag within acceptable 3-day policy window.
+EVAL_0423,TXN_EVAL_0423,DATE_MISMATCH,LIKELY_MATCH,MARK_FOR_REVIEW,True,Settlement date lag within acceptable 3-day policy window.
+EVAL_0424,TXN_EVAL_0424,DATE_MISMATCH,LIKELY_MATCH,MARK_FOR_REVIEW,True,Settlement date lag within acceptable 3-day policy window.
+EVAL_0425,TXN_EVAL_0425,DATE_MISMATCH,LIKELY_MATCH,MARK_FOR_REVIEW,True,Settlement date lag within acceptable 3-day policy window.
+EVAL_0426,TXN_EVAL_0426,DATE_MISMATCH,LIKELY_MATCH,MARK_FOR_REVIEW,True,Settlement date lag within acceptable 3-day policy window.
+EVAL_0427,TXN_EVAL_0427,DATE_MISMATCH,LIKELY_MATCH,MARK_FOR_REVIEW,True,Settlement date lag within acceptable 3-day policy window.
+EVAL_0428,TXN_EVAL_0428,DATE_MISMATCH,LIKELY_MATCH,MARK_FOR_REVIEW,True,Settlement date lag within acceptable 3-day policy window.
+EVAL_0429,TXN_EVAL_0429,DATE_MISMATCH,LIKELY_MATCH,MARK_FOR_REVIEW,True,Settlement date lag within acceptable 3-day policy window.
+EVAL_0430,TXN_EVAL_0430,DATE_MISMATCH,LIKELY_MATCH,MARK_FOR_REVIEW,True,Settlement date lag within acceptable 3-day policy window.
+EVAL_0431,TXN_EVAL_0431,DATE_MISMATCH,LIKELY_MATCH,MARK_FOR_REVIEW,True,Settlement date lag within acceptable 3-day policy window.
+EVAL_0432,TXN_EVAL_0432,DATE_MISMATCH,LIKELY_MATCH,MARK_FOR_REVIEW,True,Settlement date lag within acceptable 3-day policy window.
+EVAL_0433,TXN_EVAL_0433,DATE_MISMATCH,LIKELY_MATCH,MARK_FOR_REVIEW,True,Settlement date lag within acceptable 3-day policy window.
+EVAL_0434,TXN_EVAL_0434,DATE_MISMATCH,LIKELY_MATCH,MARK_FOR_REVIEW,True,Settlement date lag within acceptable 3-day policy window.
+EVAL_0435,TXN_EVAL_0435,DATE_MISMATCH,LIKELY_MATCH,MARK_FOR_REVIEW,True,Settlement date lag within acceptable 3-day policy window.
+EVAL_0436,TXN_EVAL_0436,DATE_MISMATCH,LIKELY_MATCH,MARK_FOR_REVIEW,True,Settlement date lag within acceptable 3-day policy window.
+EVAL_0437,TXN_EVAL_0437,DATE_MISMATCH,LIKELY_MATCH,MARK_FOR_REVIEW,True,Settlement date lag within acceptable 3-day policy window.
+EVAL_0438,TXN_EVAL_0438,DATE_MISMATCH,LIKELY_MATCH,MARK_FOR_REVIEW,True,Settlement date lag within acceptable 3-day policy window.
+EVAL_0439,TXN_EVAL_0439,DATE_MISMATCH,LIKELY_MATCH,MARK_FOR_REVIEW,True,Settlement date lag within acceptable 3-day policy window.
+EVAL_0440,TXN_EVAL_0440,DATE_MISMATCH,LIKELY_MATCH,MARK_FOR_REVIEW,True,Settlement date lag within acceptable 3-day policy window.
+EVAL_0441,TXN_EVAL_0441,REFERENCE_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Reference string typo in bank transaction.
+EVAL_0442,TXN_EVAL_0442,REFERENCE_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Reference string typo in bank transaction.
+EVAL_0443,TXN_EVAL_0443,REFERENCE_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Reference string typo in bank transaction.
+EVAL_0444,TXN_EVAL_0444,REFERENCE_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Reference string typo in bank transaction.
+EVAL_0445,TXN_EVAL_0445,REFERENCE_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Reference string typo in bank transaction.
+EVAL_0446,TXN_EVAL_0446,REFERENCE_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Reference string typo in bank transaction.
+EVAL_0447,TXN_EVAL_0447,REFERENCE_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Reference string typo in bank transaction.
+EVAL_0448,TXN_EVAL_0448,REFERENCE_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Reference string typo in bank transaction.
+EVAL_0449,TXN_EVAL_0449,REFERENCE_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Reference string typo in bank transaction.
+EVAL_0450,TXN_EVAL_0450,REFERENCE_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Reference string typo in bank transaction.
+EVAL_0451,TXN_EVAL_0451,REFERENCE_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Reference string typo in bank transaction.
+EVAL_0452,TXN_EVAL_0452,REFERENCE_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Reference string typo in bank transaction.
+EVAL_0453,TXN_EVAL_0453,REFERENCE_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Reference string typo in bank transaction.
+EVAL_0454,TXN_EVAL_0454,REFERENCE_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Reference string typo in bank transaction.
+EVAL_0455,TXN_EVAL_0455,REFERENCE_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Reference string typo in bank transaction.
+EVAL_0456,TXN_EVAL_0456,REFERENCE_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Reference string typo in bank transaction.
+EVAL_0457,TXN_EVAL_0457,REFERENCE_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Reference string typo in bank transaction.
+EVAL_0458,TXN_EVAL_0458,REFERENCE_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Reference string typo in bank transaction.
+EVAL_0459,TXN_EVAL_0459,REFERENCE_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Reference string typo in bank transaction.
+EVAL_0460,TXN_EVAL_0460,REFERENCE_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Reference string typo in bank transaction.
+EVAL_0461,TXN_EVAL_0461,REFERENCE_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Reference string typo in bank transaction.
+EVAL_0462,TXN_EVAL_0462,REFERENCE_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Reference string typo in bank transaction.
+EVAL_0463,TXN_EVAL_0463,REFERENCE_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Reference string typo in bank transaction.
+EVAL_0464,TXN_EVAL_0464,REFERENCE_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Reference string typo in bank transaction.
+EVAL_0465,TXN_EVAL_0465,REFERENCE_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Reference string typo in bank transaction.
+EVAL_0466,TXN_EVAL_0466,REFERENCE_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Reference string typo in bank transaction.
+EVAL_0467,TXN_EVAL_0467,REFERENCE_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Reference string typo in bank transaction.
+EVAL_0468,TXN_EVAL_0468,REFERENCE_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Reference string typo in bank transaction.
+EVAL_0469,TXN_EVAL_0469,REFERENCE_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Reference string typo in bank transaction.
+EVAL_0470,TXN_EVAL_0470,REFERENCE_MISMATCH,UNRESOLVED,MARK_FOR_REVIEW,False,Reference string typo in bank transaction.
+EVAL_0471,TXN_EVAL_0471,MULTIPLE_CANDIDATES,UNRESOLVED,ESCALATE,False,Multiple ambiguous candidate bank settlements exist.
+EVAL_0472,TXN_EVAL_0472,MULTIPLE_CANDIDATES,UNRESOLVED,ESCALATE,False,Multiple ambiguous candidate bank settlements exist.
+EVAL_0473,TXN_EVAL_0473,MULTIPLE_CANDIDATES,UNRESOLVED,ESCALATE,False,Multiple ambiguous candidate bank settlements exist.
+EVAL_0474,TXN_EVAL_0474,MULTIPLE_CANDIDATES,UNRESOLVED,ESCALATE,False,Multiple ambiguous candidate bank settlements exist.
+EVAL_0475,TXN_EVAL_0475,MULTIPLE_CANDIDATES,UNRESOLVED,ESCALATE,False,Multiple ambiguous candidate bank settlements exist.
+EVAL_0476,TXN_EVAL_0476,MULTIPLE_CANDIDATES,UNRESOLVED,ESCALATE,False,Multiple ambiguous candidate bank settlements exist.
+EVAL_0477,TXN_EVAL_0477,MULTIPLE_CANDIDATES,UNRESOLVED,ESCALATE,False,Multiple ambiguous candidate bank settlements exist.
+EVAL_0478,TXN_EVAL_0478,MULTIPLE_CANDIDATES,UNRESOLVED,ESCALATE,False,Multiple ambiguous candidate bank settlements exist.
+EVAL_0479,TXN_EVAL_0479,MULTIPLE_CANDIDATES,UNRESOLVED,ESCALATE,False,Multiple ambiguous candidate bank settlements exist.
+EVAL_0480,TXN_EVAL_0480,MULTIPLE_CANDIDATES,UNRESOLVED,ESCALATE,False,Multiple ambiguous candidate bank settlements exist.
+EVAL_0481,TXN_EVAL_0481,MULTIPLE_CANDIDATES,UNRESOLVED,ESCALATE,False,Multiple ambiguous candidate bank settlements exist.
+EVAL_0482,TXN_EVAL_0482,MULTIPLE_CANDIDATES,UNRESOLVED,ESCALATE,False,Multiple ambiguous candidate bank settlements exist.
+EVAL_0483,TXN_EVAL_0483,MULTIPLE_CANDIDATES,UNRESOLVED,ESCALATE,False,Multiple ambiguous candidate bank settlements exist.
+EVAL_0484,TXN_EVAL_0484,MULTIPLE_CANDIDATES,UNRESOLVED,ESCALATE,False,Multiple ambiguous candidate bank settlements exist.
+EVAL_0485,TXN_EVAL_0485,MULTIPLE_CANDIDATES,UNRESOLVED,ESCALATE,False,Multiple ambiguous candidate bank settlements exist.
+EVAL_0486,TXN_EVAL_0486,MULTIPLE_CANDIDATES,UNRESOLVED,ESCALATE,False,Multiple ambiguous candidate bank settlements exist.
+EVAL_0487,TXN_EVAL_0487,MULTIPLE_CANDIDATES,UNRESOLVED,ESCALATE,False,Multiple ambiguous candidate bank settlements exist.
+EVAL_0488,TXN_EVAL_0488,MULTIPLE_CANDIDATES,UNRESOLVED,ESCALATE,False,Multiple ambiguous candidate bank settlements exist.
+EVAL_0489,TXN_EVAL_0489,MULTIPLE_CANDIDATES,UNRESOLVED,ESCALATE,False,Multiple ambiguous candidate bank settlements exist.
+EVAL_0490,TXN_EVAL_0490,MULTIPLE_CANDIDATES,UNRESOLVED,ESCALATE,False,Multiple ambiguous candidate bank settlements exist.
+EVAL_0491,TXN_EVAL_0491,MULTIPLE_CANDIDATES,UNRESOLVED,ESCALATE,False,Multiple ambiguous candidate bank settlements exist.
+EVAL_0492,TXN_EVAL_0492,MULTIPLE_CANDIDATES,UNRESOLVED,ESCALATE,False,Multiple ambiguous candidate bank settlements exist.
+EVAL_0493,TXN_EVAL_0493,MULTIPLE_CANDIDATES,UNRESOLVED,ESCALATE,False,Multiple ambiguous candidate bank settlements exist.
+EVAL_0494,TXN_EVAL_0494,MULTIPLE_CANDIDATES,UNRESOLVED,ESCALATE,False,Multiple ambiguous candidate bank settlements exist.
+EVAL_0495,TXN_EVAL_0495,MULTIPLE_CANDIDATES,UNRESOLVED,ESCALATE,False,Multiple ambiguous candidate bank settlements exist.
+EVAL_0496,TXN_EVAL_0496,MULTIPLE_CANDIDATES,UNRESOLVED,ESCALATE,False,Multiple ambiguous candidate bank settlements exist.
+EVAL_0497,TXN_EVAL_0497,MULTIPLE_CANDIDATES,UNRESOLVED,ESCALATE,False,Multiple ambiguous candidate bank settlements exist.
+EVAL_0498,TXN_EVAL_0498,MULTIPLE_CANDIDATES,UNRESOLVED,ESCALATE,False,Multiple ambiguous candidate bank settlements exist.
+EVAL_0499,TXN_EVAL_0499,MULTIPLE_CANDIDATES,UNRESOLVED,ESCALATE,False,Multiple ambiguous candidate bank settlements exist.
+EVAL_0500,TXN_EVAL_0500,MULTIPLE_CANDIDATES,UNRESOLVED,ESCALATE,False,Multiple ambiguous candidate bank settlements exist.

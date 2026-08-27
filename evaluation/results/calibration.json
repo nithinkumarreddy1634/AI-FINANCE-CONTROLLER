@@ -1,0 +1,206 @@
+{
+  "calibration_analysis": [
+    {
+      "confidence_range": "90\u2013100",
+      "total_predictions": 100,
+      "correct_predictions": 100,
+      "actual_accuracy_pct": 100.0
+    },
+    {
+      "confidence_range": "80\u201389",
+      "total_predictions": 320,
+      "correct_predictions": 90,
+      "actual_accuracy_pct": 28.12
+    },
+    {
+      "confidence_range": "70\u201379",
+      "total_predictions": 0,
+      "correct_predictions": 0,
+      "actual_accuracy_pct": 0.0
+    },
+    {
+      "confidence_range": "60\u201369",
+      "total_predictions": 0,
+      "correct_predictions": 0,
+      "actual_accuracy_pct": 0.0
+    },
+    {
+      "confidence_range": "Below 60",
+      "total_predictions": 80,
+      "correct_predictions": 80,
+      "actual_accuracy_pct": 100.0
+    }
+  ],
+  "recommended_optimal_thresholds": {
+    "auto_reconcile_threshold": 92,
+    "human_review_threshold": 60,
+    "auto_count": 0,
+    "review_count": 420,
+    "escalate_count": 80,
+    "false_matches": 0,
+    "false_match_rate_pct": 0.0,
+    "accuracy_pct": 54.0
+  },
+  "threshold_grid_search": [
+    {
+      "auto_reconcile_threshold": 85,
+      "human_review_threshold": 60,
+      "auto_count": 420,
+      "review_count": 0,
+      "escalate_count": 80,
+      "false_matches": 190,
+      "false_match_rate_pct": 38.0,
+      "accuracy_pct": 62.0
+    },
+    {
+      "auto_reconcile_threshold": 85,
+      "human_review_threshold": 65,
+      "auto_count": 420,
+      "review_count": 0,
+      "escalate_count": 80,
+      "false_matches": 190,
+      "false_match_rate_pct": 38.0,
+      "accuracy_pct": 62.0
+    },
+    {
+      "auto_reconcile_threshold": 85,
+      "human_review_threshold": 70,
+      "auto_count": 420,
+      "review_count": 0,
+      "escalate_count": 80,
+      "false_matches": 190,
+      "false_match_rate_pct": 38.0,
+      "accuracy_pct": 62.0
+    },
+    {
+      "auto_reconcile_threshold": 85,
+      "human_review_threshold": 75,
+      "auto_count": 420,
+      "review_count": 0,
+      "escalate_count": 80,
+      "false_matches": 190,
+      "false_match_rate_pct": 38.0,
+      "accuracy_pct": 62.0
+    },
+    {
+      "auto_reconcile_threshold": 90,
+      "human_review_threshold": 60,
+      "auto_count": 100,
+      "review_count": 320,
+      "escalate_count": 80,
+      "false_matches": 100,
+      "false_match_rate_pct": 20.0,
+      "accuracy_pct": 34.0
+    },
+    {
+      "auto_reconcile_threshold": 90,
+      "human_review_threshold": 65,
+      "auto_count": 100,
+      "review_count": 320,
+      "escalate_count": 80,
+      "false_matches": 100,
+      "false_match_rate_pct": 20.0,
+      "accuracy_pct": 34.0
+    },
+    {
+      "auto_reconcile_threshold": 90,
+      "human_review_threshold": 70,
+      "auto_count": 100,
+      "review_count": 320,
+      "escalate_count": 80,
+      "false_matches": 100,
+      "false_match_rate_pct": 20.0,
+      "accuracy_pct": 34.0
+    },
+    {
+      "auto_reconcile_threshold": 90,
+      "human_review_threshold": 75,
+      "auto_count": 100,
+      "review_count": 320,
+      "escalate_count": 80,
+      "false_matches": 100,
+      "false_match_rate_pct": 20.0,
+      "accuracy_pct": 34.0
+    },
+    {
+      "auto_reconcile_threshold": 92,
+      "human_review_threshold": 60,
+      "auto_count": 0,
+      "review_count": 420,
+      "escalate_count": 80,
+      "false_matches": 0,
+      "false_match_rate_pct": 0.0,
+      "accuracy_pct": 54.0
+    },
+    {
+      "auto_reconcile_threshold": 92,
+      "human_review_threshold": 65,
+      "auto_count": 0,
+      "review_count": 420,
+      "escalate_count": 80,
+      "false_matches": 0,
+      "false_match_rate_pct": 0.0,
+      "accuracy_pct": 54.0
+    },
+    {
+      "auto_reconcile_threshold": 92,
+      "human_review_threshold": 70,
+      "auto_count": 0,
+      "review_count": 420,
+      "escalate_count": 80,
+      "false_matches": 0,
+      "false_match_rate_pct": 0.0,
+      "accuracy_pct": 54.0
+    },
+    {
+      "auto_reconcile_threshold": 92,
+      "human_review_threshold": 75,
+      "auto_count": 0,
+      "review_count": 420,
+      "escalate_count": 80,
+      "false_matches": 0,
+      "false_match_rate_pct": 0.0,
+      "accuracy_pct": 54.0
+    },
+    {
+      "auto_reconcile_threshold": 95,
+      "human_review_threshold": 60,
+      "auto_count": 0,
+      "review_count": 420,
+      "escalate_count": 80,
+      "false_matches": 0,
+      "false_match_rate_pct": 0.0,
+      "accuracy_pct": 54.0
+    },
+    {
+      "auto_reconcile_threshold": 95,
+      "human_review_threshold": 65,
+      "auto_count": 0,
+      "review_count": 420,
+      "escalate_count": 80,
+      "false_matches": 0,
+      "false_match_rate_pct": 0.0,
+      "accuracy_pct": 54.0
+    },
+    {
+      "auto_reconcile_threshold": 95,
+      "human_review_threshold": 70,
+      "auto_count": 0,
+      "review_count": 420,
+      "escalate_count": 80,
+      "false_matches": 0,
+      "false_match_rate_pct": 0.0,
+      "accuracy_pct": 54.0
+    },
+    {
+      "auto_reconcile_threshold": 95,
+      "human_review_threshold": 75,
+      "auto_count": 0,
+      "review_count": 420,
+      "escalate_count": 80,
+      "false_matches": 0,
+      "false_match_rate_pct": 0.0,
+      "accuracy_pct": 54.0
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "total_records_evaluated": 500,
+  "phase1_rules": {
+    "accuracy_pct": 82.0,
+    "precision_pct": 87.23,
+    "recall_pct": 82.0,
+    "f1_score_pct": 84.53,
+    "false_match_rate_pct": 12.0,
+    "resolution_rate_pct": 58.0,
+    "escalation_rate_pct": 42.0
+  },
+  "phase2_ai": {
+    "accuracy_pct": 88.0,
+    "precision_pct": 93.62,
+    "recall_pct": 88.0,
+    "f1_score_pct": 90.72,
+    "false_match_rate_pct": 6.0,
+    "resolution_rate_pct": 52.0,
+    "escalation_rate_pct": 48.0
+  },
+  "phase3_ai_rag": {
+    "accuracy_pct": 88.0,
+    "precision_pct": 93.62,
+    "recall_pct": 88.0,
+    "f1_score_pct": 90.72,
+    "false_match_rate_pct": 6.0,
+    "resolution_rate_pct": 52.0,
+    "escalation_rate_pct": 48.0
+  },
+  "comparison_table": [
+    {
+      "metric": "Accuracy (%)",
+      "rules": "82.0%",
+      "ai": "88.0%",
+      "ai_rag": "88.0%"
+    },
+    {
+      "metric": "Precision (%)",
+      "rules": "87.23%",
+      "ai": "93.62%",
+      "ai_rag": "93.62%"
+    },
+    {
+      "metric": "Recall (%)",
+      "rules": "82.0%",
+      "ai": "88.0%",
+      "ai_rag": "88.0%"
+    },
+    {
+      "metric": "F1 Score (%)",
+      "rules": "84.53%",
+      "ai": "90.72%",
+      "ai_rag": "90.72%"
+    },
+    {
+      "metric": "False Match Rate (%)",
+      "rules": "12.0%",
+      "ai": "6.0%",
+      "ai_rag": "6.0% (Guardrail Verified)"
+    },
+    {
+      "metric": "Resolution Rate (%)",
+      "rules": "58.0%",
+      "ai": "52.0%",
+      "ai_rag": "52.0%"
+    },
+    {
+      "metric": "Escalation Rate (%)",
+      "rules": "42.0%",
+      "ai": "48.0%",
+      "ai_rag": "48.0%"
+    }
+  ]
+}

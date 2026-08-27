@@ -1,0 +1,111 @@
+/* Custom Fintech Design System - Phase 4 Product UI */
+:root {
+  --bg-primary: #0b1329;
+  --bg-sidebar: #0f172a;
+  --bg-card: #1e293b;
+  --bg-card-hover: #334155;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --accent-blue: #3b82f6;
+  --accent-green: #10b981;
+  --accent-amber: #f59e0b;
+  --accent-red: #ef4444;
+  --accent-purple: #8b5cf6;
+  --border-color: #334155;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+}
+
+/* Sidebar Nav Item Styling */
+.nav-item {
+  display: flex;
+  items-center: center;
+  gap: 0.75rem;
+  padding: 0.625rem 0.875rem;
+  border-radius: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #94a3b8;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  background-color: #1e293b;
+  color: #f8fafc;
+}
+
+.nav-item.active {
+  background-color: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+/* Card Glow Effect */
+.fintech-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.fintech-card:hover {
+  border-color: #475569;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  background-color: rgba(11, 19, 41, 0.85);
+  backdrop-filter: blur(6px);
+}
+
+/* Priority Card Borders */
+.priority-CRITICAL { border-left: 4px solid #ef4444 !important; background-color: rgba(239, 68, 68, 0.05); }
+.priority-HIGH { border-left: 4px solid #f59e0b !important; background-color: rgba(245, 158, 11, 0.05); }
+.priority-MEDIUM { border-left: 4px solid #3b82f6 !important; background-color: rgba(59, 130, 246, 0.05); }
+.priority-LOW { border-left: 4px solid #64748b !important; }
+
+/* Status Badges */
+.badge-MATCHED, .badge-AUTO_RECONCILE, .badge-LIKELY_MATCH { background-color: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4); }
+.badge-AMOUNT_MISMATCH, .badge-MARK_FOR_REVIEW, .badge-PARTIAL_MATCH { background-color: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); }
+.badge-MISSING_PAYMENT, .badge-ESCALATE, .badge-MISSING_BANK_TRANSACTION { background-color: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.4); }
+.badge-DUPLICATE_TRANSACTION, .badge-DUPLICATE { background-color: rgba(139, 92, 246, 0.2); color: #c084fc; border: 1px solid rgba(139, 92, 246, 0.4); }
+.badge-DATE_MISMATCH { background-color: rgba(59, 130, 246, 0.2); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.4); }
+.badge-REFERENCE_MISMATCH { background-color: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); }
+.badge-PARTIAL_PAYMENT { background-color: rgba(236, 72, 153, 0.2); color: #f472b6; border: 1px solid rgba(236, 72, 153, 0.4); }
+.badge-UNRESOLVED, .badge-NO_ACTION { background-color: rgba(148, 163, 184, 0.2); color: #cbd5e1; border: 1px solid rgba(148, 163, 184, 0.4); }
+
+.badge-APPROVED { background-color: rgba(16, 185, 129, 0.25); color: #34d399; border: 1px solid #10b981; }
+.badge-REJECTED { background-color: rgba(239, 68, 68, 0.25); color: #f87171; border: 1px solid #ef4444; }
+.badge-MODIFIED { background-color: rgba(59, 130, 246, 0.25); color: #60a5fa; border: 1px solid #3b82f6; }
+
+/* Table Hover Effect */
+tr.table-row-clickable {
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+tr.table-row-clickable:hover {
+  background-color: #1e293b !important;
+}

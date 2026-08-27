@@ -1,0 +1,5 @@
+bank_transaction_id,transaction_reference,transaction_date,received_amount,bank_status
+BNK_S1,REF-TXN_S1,2026-02-02 09:00:00,2500.0,SETTLED
+BNK_S2,REF-TXN_S2,2026-02-02 09:00:00,4500.0,SETTLED
+BNK_S3,PAY-1042,2026-02-02 09:00:00,1800.0,SETTLED
+BNK_S5,REF-TXN_S5,2026-02-02 09:00:00,4000.0,SETTLED

@@ -1,0 +1,25 @@
+# Environment and secrets
+.env
+*.env
+*.pem
+*.key
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local data & vector store runtime outputs
+data/vector_store.json
+data/audit_log.json
+evaluation/results/*.png
+evaluation/charts/*.png
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

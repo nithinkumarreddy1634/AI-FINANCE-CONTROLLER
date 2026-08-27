@@ -1,0 +1,132 @@
+{
+  "overall_metrics": {
+    "total_records_evaluated": 500,
+    "phase1_rules": {
+      "accuracy_pct": 88.0,
+      "precision_pct": 88.0,
+      "recall_pct": 88.0,
+      "f1_score_pct": 88.0,
+      "false_match_rate_pct": 12.0,
+      "resolution_rate_pct": 58.0,
+      "escalation_rate_pct": 42.0
+    },
+    "phase2_ai": {
+      "accuracy_pct": 54.0,
+      "precision_pct": 100.0,
+      "recall_pct": 54.0,
+      "f1_score_pct": 70.13,
+      "false_match_rate_pct": 0.0,
+      "resolution_rate_pct": 0.0,
+      "escalation_rate_pct": 100.0
+    },
+    "phase3_ai_rag": {
+      "accuracy_pct": 54.0,
+      "precision_pct": 100.0,
+      "recall_pct": 54.0,
+      "f1_score_pct": 70.13,
+      "false_match_rate_pct": 0.0,
+      "resolution_rate_pct": 0.0,
+      "escalation_rate_pct": 100.0
+    },
+    "comparison_table": [
+      {
+        "metric": "Accuracy (%)",
+        "rules": "88.0%",
+        "ai": "54.0%",
+        "ai_rag": "54.0%"
+      },
+      {
+        "metric": "Precision (%)",
+        "rules": "88.0%",
+        "ai": "100.0%",
+        "ai_rag": "100.0%"
+      },
+      {
+        "metric": "Recall (%)",
+        "rules": "88.0%",
+        "ai": "54.0%",
+        "ai_rag": "54.0%"
+      },
+      {
+        "metric": "F1 Score (%)",
+        "rules": "88.0%",
+        "ai": "70.13%",
+        "ai_rag": "70.13%"
+      },
+      {
+        "metric": "False Match Rate (%)",
+        "rules": "12.0%",
+        "ai": "0.0%",
+        "ai_rag": "0.0% (Guardrail Verified)"
+      },
+      {
+        "metric": "Resolution Rate (%)",
+        "rules": "58.0%",
+        "ai": "0.0%",
+        "ai_rag": "0.0%"
+      },
+      {
+        "metric": "Escalation Rate (%)",
+        "rules": "42.0%",
+        "ai": "100.0%",
+        "ai_rag": "100.0%"
+      }
+    ]
+  },
+  "exception_level_breakdown": [
+    {
+      "exception_type": "EXACT_MATCH",
+      "total_cases": 200,
+      "correct_cases": 0,
+      "accuracy_pct": 0.0
+    },
+    {
+      "exception_type": "PARTIAL_PAYMENT",
+      "total_cases": 50,
+      "correct_cases": 50,
+      "accuracy_pct": 100.0
+    },
+    {
+      "exception_type": "AMOUNT_MISMATCH",
+      "total_cases": 50,
+      "correct_cases": 50,
+      "accuracy_pct": 100.0
+    },
+    {
+      "exception_type": "MISSING_PAYMENT",
+      "total_cases": 40,
+      "correct_cases": 40,
+      "accuracy_pct": 100.0
+    },
+    {
+      "exception_type": "MISSING_BANK_TRANSACTION",
+      "total_cases": 40,
+      "correct_cases": 40,
+      "accuracy_pct": 100.0
+    },
+    {
+      "exception_type": "DUPLICATE_TRANSACTION",
+      "total_cases": 30,
+      "correct_cases": 30,
+      "accuracy_pct": 100.0
+    },
+    {
+      "exception_type": "DATE_MISMATCH",
+      "total_cases": 30,
+      "correct_cases": 0,
+      "accuracy_pct": 0.0
+    },
+    {
+      "exception_type": "REFERENCE_MISMATCH",
+      "total_cases": 30,
+      "correct_cases": 30,
+      "accuracy_pct": 100.0
+    },
+    {
+      "exception_type": "MULTIPLE_CANDIDATES",
+      "total_cases": 30,
+      "correct_cases": 30,
+      "accuracy_pct": 100.0
+    }
+  ]
+}
