@@ -731,117 +731,6 @@ async function runAIInvestigationAll() {
             btn.innerHTML = `<span>🤖</span> Run OpenRouter Agent Analysis`;
         }
     }
-// Tab: Live AI Chat Assistant View
-function renderChatView() {
-    const input = document.getElementById('live-chat-input');
-    if (input) input.focus();
-}
-
-async function submitLiveChat() {
-    const input = document.getElementById('live-chat-input');
-    if (!input) return;
-    const text = input.value.trim();
-    if (!text) return;
-    input.value = '';
-    await sendLiveChatMessage(text);
-}
-
-async function sendLiveChatMessage(promptText) {
-    const container = document.getElementById('live-chat-messages');
-    const sendBtn = document.getElementById('live-chat-send-btn');
-    if (!container) return;
-
-    // User Message Bubble
-    const userDiv = document.createElement('div');
-    userDiv.className = 'p-3.5 rounded-xl bg-violet-600/25 border border-violet-500/40 text-slate-100 self-end ml-8 space-y-1';
-    userDiv.innerHTML = `
-        <div class="flex items-center justify-between text-[11px] border-b border-violet-500/30 pb-1">
-            <span class="font-bold text-violet-300">You (Finance Officer)</span>
-            <span class="text-slate-400 font-mono">${new Date().toLocaleTimeString()}</span>
-        </div>
-        <p class="leading-relaxed whitespace-pre-wrap">${escapeHtml(promptText)}</p>
-    `;
-    container.appendChild(userDiv);
-    container.scrollTop = container.scrollHeight;
-
-    // AI Thinking Bubble
-    const aiDiv = document.createElement('div');
-    aiDiv.className = 'p-4 rounded-xl bg-slate-900 border border-slate-800 text-slate-200 mr-8 space-y-2';
-    aiDiv.innerHTML = `
-        <div class="flex items-center gap-2 text-cyan-400 font-semibold text-[11px]">
-            <span class="animate-spin">🔄</span> Consulting OpenRouter AI & Policy RAG...
-        </div>
-    `;
-    container.appendChild(aiDiv);
-    container.scrollTop = container.scrollHeight;
-
-    if (sendBtn) sendBtn.disabled = true;
-
-    try {
-        const res = await fetch(`${API_BASE_URL}/api/v1/ai/copilot-chat`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ prompt: promptText })
-        });
-        const data = await res.json();
-        const reply = data.reply || 'No analysis available.';
-        const model = data.model || 'liquid/lfm-2.5-2.6b:free';
-
-        aiDiv.innerHTML = `
-            <div class="flex items-center justify-between border-b border-slate-800 pb-1.5">
-                <span class="font-bold text-cyan-300 flex items-center gap-1.5 text-xs">
-                    <span>✨</span> AI Finance Assistant
-                </span>
-                <span class="text-[10px] font-mono text-slate-400 bg-slate-950 px-2 py-0.5 rounded border border-slate-800">${escapeHtml(model)}</span>
-            </div>
-            <div class="leading-relaxed whitespace-pre-wrap text-slate-200">${escapeHtml(reply)}</div>
-        `;
-    } catch (err) {
-        aiDiv.innerHTML = `
-            <div class="flex items-center justify-between border-b border-slate-800 pb-1.5">
-                <span class="font-bold text-cyan-300 flex items-center gap-1.5 text-xs">
-                    <span>✨</span> AI Finance Assistant (Deterministic Fallback)
-                </span>
-                <span class="text-[10px] font-mono text-slate-400">Policy RAG Guardrail</span>
-            </div>
-            <p class="leading-relaxed">Based on live reconciliation ledger: 120 records analyzed with 55 confirmed matches. 65 discrepancies tracked totaling ₹116,668.60. 38 records qualify for auto-reconciliation under Policy POL-PAY-001 (Gateway Fees ≤ ₹50), while missing bank credits require escalation.</p>
-        `;
-    } finally {
-        if (sendBtn) sendBtn.disabled = false;
-        container.scrollTop = container.scrollHeight;
-    }
-}
-
-function clearChatMessages() {
-    const container = document.getElementById('live-chat-messages');
-    if (container) {
-        container.innerHTML = `
-            <div class="p-4 rounded-xl bg-violet-950/30 border border-violet-800/40 text-slate-200 space-y-1.5">
-                <div class="flex items-center justify-between border-b border-violet-900/40 pb-1.5">
-                    <span class="font-bold text-violet-300 flex items-center gap-1.5 text-xs">
-                        <span>🤖</span> AI Finance Controller Assistant
-                    </span>
-                    <span class="text-[10px] font-mono text-cyan-400">OpenRouter (liquid/lfm-2.5-2.6b:free)</span>
-                </div>
-                <p>Welcome to the <strong>Live AI Financial Controller Chat</strong>. I have direct access to your 120 reconciliation records, 65 flagged exceptions, and official Razorpay policies (<code>POL-PAY-001</code> through <code>POL-PAY-004</code>).</p>
-                <p class="text-slate-400">Ask me about specific Order IDs, fee variance calculations, RAG policy citations, or batch resolution recommendations.</p>
-            </div>
-        `;
-        showToast('Chat history cleared', 'info');
-    }
-}
-
-function exportChatTranscript() {
-    const container = document.getElementById('live-chat-messages');
-    if (!container) return;
-    const text = container.innerText;
-    const blob = new Blob([text], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `AI_Finance_Chat_Transcript_${new Date().toISOString().slice(0,10)}.txt`;
-    a.click();
-    showToast('Chat transcript exported!', 'success');
 }
 
 // Tab 6: Reconciliation Runner
@@ -1105,10 +994,11 @@ async function uploadAndReconcileCSVs() {
 
 // Modal Investigation Detail View
 async function openInvestigationModal(orderId) {
-    const modal = document.getElementById('investigation-modal');
-    if (modal) modal.classList.remove('hidden');
+    try {
+        const modal = document.getElementById('investigation-modal');
+        if (modal) modal.classList.remove('hidden');
 
-    let txn = state.transactions.find(t => t.order_id === orderId) || null;
+        let txn = state.transactions.find(t => t.order_id === orderId) || null;
     let agentData = state.aiMap[orderId] || {
         investigation_id: `INV-AI-${orderId}`,
         order_id: orderId,
