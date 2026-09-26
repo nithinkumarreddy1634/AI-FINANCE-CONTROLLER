@@ -78,3 +78,15 @@ def get_ai_metrics():
 def get_transaction_audit(transaction_id: str):
     return ai_service.get_audit_trail(order_id=transaction_id)
 
+class CopilotQuerySchema(BaseModel):
+    prompt: str = Field(..., description="Query for the AI Finance Copilot")
+    context: Optional[Dict[str, Any]] = Field(None, description="Optional extra context")
+
+@ai_router.post("/ai/copilot-chat", summary="Interactive AI Finance Copilot Chat")
+def copilot_chat(query: CopilotQuerySchema):
+    return ai_service.chat_copilot(query.prompt, query.context)
+
+@ai_router.post("/ai/generate-narrative", summary="Generate Executive CFO Audit Narrative via AI")
+def generate_narrative():
+    return ai_service.generate_narrative_report()
+

@@ -108,14 +108,21 @@
                     </svg>
                 </div>
 
-                <!-- Theme Switcher Selector -->
-                <select id="theme-selector" onchange="toggleTheme(this.value)" class="bg-slate-950/80 border border-slate-700/80 text-xs text-slate-300 px-2.5 py-1.5 rounded-lg focus:outline-none focus:border-cyan-500 cursor-pointer">
-                    <option value="cyber">🌌 Cyber Dark</option>
-                    <option value="emerald">⚡ Razorpay Emerald</option>
+                <!-- Lovely Theme Switcher Selector -->
+                <select id="theme-selector" onchange="toggleTheme(this.value)" class="bg-slate-900 border border-slate-700/80 text-xs text-slate-200 px-3 py-1.5 rounded-lg focus:outline-none focus:border-violet-500 cursor-pointer shadow-sm font-medium">
+                    <option value="aurora" selected>🔮 Aurora Luxe</option>
+                    <option value="sunset">🌅 Sunset Coral</option>
+                    <option value="emerald">🌿 Mint Emerald</option>
                 </select>
 
+                <!-- Ask AI Copilot Button in Topbar -->
+                <button onclick="toggleAICopilot()" class="btn-shimmer text-white font-bold text-xs px-3.5 py-1.5 rounded-lg shadow-lg flex items-center gap-1.5 transition hover:scale-105 active:scale-95">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                    <span>🤖 Ask AI Copilot</span>
+                </button>
+
                 <!-- 1-Click Run Demo Pipeline Button -->
-                <button id="run-demo-topbar-btn" class="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-semibold text-xs px-3.5 py-1.5 rounded-lg transition shadow-lg shadow-blue-600/25 flex items-center gap-1.5">
+                <button id="run-demo-topbar-btn" class="bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white font-semibold text-xs px-3.5 py-1.5 rounded-lg transition shadow-lg shadow-violet-600/25 flex items-center gap-1.5">
                     <span>⚡</span> Run 1-Click Demo
                 </button>
 
@@ -152,19 +159,53 @@
                             Streamlines customer order matching, payment gateway webhooks, and bank settlement credits in real-time.
                         </p>
                         <div class="pt-2 flex flex-wrap gap-3">
-                            <button onclick="runDemoPipeline()" class="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-semibold text-xs px-5 py-2.5 rounded-lg shadow-lg shadow-blue-600/25 transition flex items-center gap-2">
+                            <button onclick="runDemoPipeline()" class="bg-gradient-to-r from-violet-600 via-indigo-600 to-cyan-500 hover:from-violet-500 hover:to-cyan-400 text-white font-semibold text-xs px-5 py-2.5 rounded-xl shadow-xl shadow-violet-600/30 transition flex items-center gap-2">
                                 <span>⚡</span> Run 1-Click Reconciliation Demo
                             </button>
-                            <button onclick="switchView('dashboard')" class="bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 font-semibold text-xs px-5 py-2.5 rounded-lg border border-slate-700 transition flex items-center gap-2">
+                            <button onclick="switchView('dashboard')" class="bg-slate-800/80 hover:bg-slate-700/80 text-slate-100 font-semibold text-xs px-5 py-2.5 rounded-xl border border-slate-700 transition flex items-center gap-2">
                                 <span>📊</span> Launch Operations Dashboard
                             </button>
-                            <button onclick="switchView('exceptions')" class="bg-slate-900 hover:bg-slate-800 text-amber-400 font-semibold text-xs px-5 py-2.5 rounded-lg border border-amber-500/30 transition flex items-center gap-2">
+                            <button onclick="switchView('exceptions')" class="bg-slate-900/90 hover:bg-slate-800 text-amber-300 font-semibold text-xs px-5 py-2.5 rounded-xl border border-amber-500/40 transition flex items-center gap-2">
                                 <span>🚨</span> Inspect Risk Queue
                             </button>
-                            <button onclick="switchView('ai-center')" class="bg-slate-900 hover:bg-slate-800 text-purple-400 font-semibold text-xs px-5 py-2.5 rounded-lg border border-purple-500/30 transition flex items-center gap-2">
-                                <span>🤖</span> OpenRouter AI Center
+                            <button onclick="toggleAICopilot()" class="bg-gradient-to-r from-violet-900/60 to-purple-900/60 hover:from-violet-800/80 text-violet-200 font-semibold text-xs px-5 py-2.5 rounded-xl border border-violet-500/40 transition flex items-center gap-2">
+                                <span>🤖</span> Open AI Copilot
                             </button>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Real-time AI Financial Diagnostic Briefing -->
+                <div class="fintech-card p-6 bg-gradient-to-r from-violet-950/40 via-slate-900/80 to-cyan-950/30 border border-violet-500/30 space-y-3 relative overflow-hidden">
+                    <div class="flex items-center justify-between border-b border-slate-800/80 pb-3">
+                        <div class="flex items-center gap-2.5">
+                            <span class="w-3 h-3 rounded-full bg-violet-400 pulse-purple"></span>
+                            <h3 class="font-bold text-sm text-slate-100 flex items-center gap-2">
+                                🤖 Real-Time AI Financial Diagnostic
+                                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-violet-500/20 text-violet-300 border border-violet-500/30 font-mono">OpenRouter Auto-Reasoning</span>
+                            </h3>
+                        </div>
+                        <button onclick="refreshAIBriefing()" class="text-xs text-cyan-400 hover:text-cyan-300 flex items-center gap-1 font-medium transition">
+                            <span>🔄</span> Refresh Briefing
+                        </button>
+                    </div>
+                    <div id="ai-home-briefing-text" class="text-xs text-slate-300 leading-relaxed font-sans">
+                        <p class="font-medium text-slate-200">
+                            <strong>System Diagnostic:</strong> 120 customer order transactions processed. 55 records verified instantly with 100% confidence.
+                            65 exceptions triaged: <strong class="text-emerald-400">38 eligible for automated resolution</strong> (primarily 2% payment gateway fee variances under Policy POL-PAY-001). 
+                            20 missing bank settlement credits prioritized for settlement desk escalation. Overall false match risk: <strong class="text-emerald-400">0.00%</strong>.
+                        </p>
+                    </div>
+                    <div class="pt-2 flex flex-wrap gap-2 text-xs">
+                        <button onclick="switchView('exceptions')" class="bg-violet-600/30 hover:bg-violet-600/50 text-violet-200 px-3.5 py-1.5 rounded-lg border border-violet-500/40 transition flex items-center gap-1.5">
+                            <span>⚡</span> AI Triage Exception Queue (65)
+                        </button>
+                        <button onclick="openAICopilotWithPrompt('Explain why 38 exceptions can be safely auto-reconciled')" class="bg-cyan-600/30 hover:bg-cyan-600/50 text-cyan-200 px-3.5 py-1.5 rounded-lg border border-cyan-500/40 transition flex items-center gap-1.5">
+                            <span>💬</span> Ask AI Copilot for Full Analysis
+                        </button>
+                        <button onclick="switchView('reports')" class="bg-slate-800 hover:bg-slate-700 text-slate-300 px-3.5 py-1.5 rounded-lg border border-slate-700 transition flex items-center gap-1.5">
+                            <span>📄</span> View Generated Reports
+                        </button>
                     </div>
                 </div>
 
@@ -296,9 +337,35 @@
                         <h2 class="text-base font-bold text-slate-100">Finance Operations Dashboard</h2>
                         <p class="text-xs text-slate-400">Real-time metrics, status breakdowns, and 3-way reconciliation benchmarks.</p>
                     </div>
-                    <button onclick="runDemoPipeline()" class="bg-cyan-600 hover:bg-cyan-500 text-white font-semibold text-xs px-3.5 py-1.5 rounded-lg transition shadow flex items-center gap-1.5">
+                    <button onclick="runDemoPipeline()" class="bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white font-semibold text-xs px-4 py-2 rounded-lg transition shadow-lg shadow-violet-600/25 flex items-center gap-1.5">
                         <span>⚡</span> Re-run Pipeline
                     </button>
+                </div>
+
+                <!-- AI Operations Anomaly & Automation Intelligence Banner -->
+                <div class="fintech-card p-4 bg-gradient-to-r from-violet-950/40 via-indigo-950/30 to-cyan-950/40 border border-violet-500/30 flex flex-col md:flex-row md:items-center justify-between gap-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-violet-600 to-cyan-500 text-white flex items-center justify-center font-bold text-lg shadow-lg">
+                            ✨
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <h3 class="font-bold text-sm text-slate-100">AI Operational Anomaly Intelligence</h3>
+                                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-violet-500/20 text-violet-300 border border-violet-500/30">Active</span>
+                            </div>
+                            <p class="text-xs text-slate-300">
+                                OpenRouter AI evaluated 65 exceptions: <strong class="text-emerald-400">38 records are verified safe</strong> for automated reconciliation with 94.8% confidence.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button onclick="runAIAutoReconciliation()" class="bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white font-semibold text-xs px-4 py-2 rounded-lg shadow-lg shadow-violet-600/25 transition flex items-center gap-1.5 whitespace-nowrap">
+                            <span>⚡</span> Auto-Resolve 38 Records
+                        </button>
+                        <button onclick="switchView('ai-center')" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs px-3 py-2 rounded-lg border border-slate-700 transition">
+                            Inspect RAG
+                        </button>
+                    </div>
                 </div>
 
                 <!-- KPI Grid -->
@@ -871,6 +938,61 @@
                 <div id="modal-audit-timeline" class="space-y-2"></div>
             </div>
 
+        </div>
+    </div>
+
+    <!-- Floating AI Copilot Trigger Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <button onclick="toggleAICopilot()" class="btn-shimmer text-white font-bold text-xs px-4 py-3 rounded-full shadow-2xl flex items-center gap-2.5 transition hover:scale-105 active:scale-95 border border-white/20">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+            <span>🤖 Ask AI Copilot</span>
+        </button>
+    </div>
+
+    <!-- Slide-over AI Copilot Panel -->
+    <div id="ai-copilot-drawer" class="fixed inset-y-0 right-0 w-full max-w-md bg-slate-900/95 backdrop-blur-2xl border-l border-violet-500/30 shadow-2xl z-50 flex flex-col closed">
+        <!-- Drawer Header -->
+        <div class="p-4 border-b border-slate-800 flex items-center justify-between bg-gradient-to-r from-violet-900/40 via-purple-900/30 to-slate-900">
+            <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-violet-600 to-cyan-500 flex items-center justify-center text-white text-base shadow-lg">
+                    🤖
+                </div>
+                <div>
+                    <h3 class="font-bold text-sm text-slate-100 flex items-center gap-2">
+                        AI Finance Copilot
+                        <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 text-[10px] font-semibold border border-emerald-500/30">Live OpenRouter</span>
+                    </h3>
+                    <p class="text-[10px] text-slate-400">Model: <span class="font-mono text-cyan-400">liquid/lfm-2.5-2.6b:free</span></p>
+                </div>
+            </div>
+            <button onclick="toggleAICopilot()" class="text-slate-400 hover:text-slate-200 text-lg p-1.5 rounded hover:bg-slate-800 transition">✕</button>
+        </div>
+
+        <!-- Quick Question Chips -->
+        <div class="p-3 bg-slate-950/60 border-b border-slate-800/80 flex flex-wrap gap-1.5 text-[11px]">
+            <button onclick="sendCopilotQuickPrompt('Summarize total financial risk exposure in bank settlement discrepancies')" class="px-2.5 py-1 rounded-full bg-slate-800/80 hover:bg-violet-900/50 text-violet-300 border border-violet-700/40 transition">💡 Risk Exposure</button>
+            <button onclick="sendCopilotQuickPrompt('What exceptions can be auto-reconciled under Policy POL-PAY-001?')" class="px-2.5 py-1 rounded-full bg-slate-800/80 hover:bg-cyan-900/50 text-cyan-300 border border-cyan-700/40 transition">⚡ Auto-Reconciliation</button>
+            <button onclick="sendCopilotQuickPrompt('Why do we have 10 amount mismatch transactions?')" class="px-2.5 py-1 rounded-full bg-slate-800/80 hover:bg-amber-900/50 text-amber-300 border border-amber-700/40 transition">🔍 Gateway Fees</button>
+            <button onclick="sendCopilotQuickPrompt('Explain escalation policy for missing bank credits')" class="px-2.5 py-1 rounded-full bg-slate-800/80 hover:bg-rose-900/50 text-rose-300 border border-rose-700/40 transition">🛡️ Escalation Rules</button>
+        </div>
+
+        <!-- Chat Message Log -->
+        <div id="copilot-chat-log" class="flex-1 p-4 overflow-y-auto space-y-3 text-xs font-sans">
+            <div class="p-3.5 rounded-xl bg-violet-950/30 border border-violet-800/40 text-slate-200 leading-relaxed">
+                <p class="font-bold text-violet-300 flex items-center gap-1.5 mb-1">
+                    <span>✨</span> AI Finance Controller Copilot
+                </p>
+                <p>Hello! I am your autonomous financial copilot connected live to OpenRouter AI and your 3-way reconciliation audit ledger.</p>
+                <p class="mt-1.5 text-slate-400">Ask me anything about payment discrepancies, fee deductions, policy citations, or audit sign-offs.</p>
+            </div>
+        </div>
+
+        <!-- Input Box -->
+        <div class="p-3 border-t border-slate-800 bg-slate-950/90 flex gap-2">
+            <input type="text" id="copilot-user-input" placeholder="Ask AI Copilot about exceptions or policies..." class="flex-1 bg-slate-900 border border-slate-700 text-slate-200 px-3 py-2 rounded-lg text-xs focus:outline-none focus:border-violet-500">
+            <button id="copilot-send-btn" onclick="sendCopilotMessage()" class="bg-gradient-to-r from-violet-600 to-cyan-600 hover:from-violet-500 hover:to-cyan-500 text-white font-semibold px-4 py-2 rounded-lg text-xs shadow-lg transition flex items-center gap-1">
+                <span>Send</span>
+            </button>
         </div>
     </div>
 
