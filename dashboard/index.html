@@ -45,6 +45,9 @@
                 <div id="nav-ai-center" onclick="switchView('ai-center')" class="nav-item">
                     <span class="text-base">🤖</span> <span>AI Investigations</span>
                 </div>
+                <div id="nav-chat" onclick="switchView('chat')" class="nav-item">
+                    <span class="text-base">💬</span> <span>Live AI Chat</span>
+                </div>
                 <div id="nav-reconciliation" onclick="switchView('reconciliation')" class="nav-item">
                     <span class="text-base">⚡</span> <span>Reconciliation Runner</span>
                 </div>
@@ -570,6 +573,79 @@
                         </thead>
                         <tbody id="ai-center-tbody"></tbody>
                     </table>
+                </div>
+            </section>
+
+            <!-- Tab: Live AI Chat Assistant View -->
+            <section id="view-chat" class="space-y-4 hidden">
+                <div class="fintech-card p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-violet-600 via-indigo-600 to-cyan-500 text-white flex items-center justify-center font-bold text-lg shadow-lg">
+                            💬
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <h2 class="text-base font-bold text-slate-100">Live AI Finance Assistant</h2>
+                                <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px] font-semibold border border-emerald-500/30 flex items-center gap-1">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span> Live OpenRouter AI
+                                </span>
+                            </div>
+                            <p class="text-xs text-slate-400">Chat in real-time about transactions, discrepancy investigations, policy RAG rules, and audit decisions.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button onclick="clearChatMessages()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs px-3 py-1.5 rounded-lg border border-slate-700 transition flex items-center gap-1">
+                            <span>🗑️</span> Clear Chat
+                        </button>
+                        <button onclick="exportChatTranscript()" class="bg-violet-900/40 hover:bg-violet-800/60 text-violet-300 text-xs px-3 py-1.5 rounded-lg border border-violet-700/50 transition flex items-center gap-1">
+                            <span>📥</span> Export Chat
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Suggested Query Chips -->
+                <div class="fintech-card p-3 flex flex-wrap items-center gap-2 text-xs">
+                    <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider mr-1">Suggested:</span>
+                    <button onclick="sendLiveChatMessage('Summarize total financial risk and discrepancy breakdown in 3 key points')" class="px-3 py-1.5 rounded-lg bg-slate-900/90 hover:bg-violet-950/60 text-violet-300 border border-violet-800/40 hover:border-violet-600 transition">
+                        📊 Summarize Risk & Discrepancies
+                    </button>
+                    <button onclick="sendLiveChatMessage('Why was ORD0002 flagged as an AMOUNT_MISMATCH? Explain root cause and fee percentage')" class="px-3 py-1.5 rounded-lg bg-slate-900/90 hover:bg-cyan-950/60 text-cyan-300 border border-cyan-800/40 hover:border-cyan-600 transition">
+                        🔍 Analyze ORD0002 Mismatch
+                    </button>
+                    <button onclick="sendLiveChatMessage('Which exceptions are eligible for automated reconciliation under Policy POL-PAY-001?')" class="px-3 py-1.5 rounded-lg bg-slate-900/90 hover:bg-emerald-950/60 text-emerald-300 border border-emerald-800/40 hover:border-emerald-600 transition">
+                        ⚡ Safe Auto-Reconciliation Candidates
+                    </button>
+                    <button onclick="sendLiveChatMessage('Explain the 48-hour settlement SLA policy POL-PAY-002 and action required for date mismatches')" class="px-3 py-1.5 rounded-lg bg-slate-900/90 hover:bg-amber-950/60 text-amber-300 border border-amber-800/40 hover:border-amber-600 transition">
+                        🛡️ 48-Hour SLA Policy Guide
+                    </button>
+                    <button onclick="sendLiveChatMessage('List all missing bank settlement credit transactions and recommended escalation procedure')" class="px-3 py-1.5 rounded-lg bg-slate-900/90 hover:bg-rose-950/60 text-rose-300 border border-rose-800/40 hover:border-rose-600 transition">
+                        🚨 Missing Bank Credits Escalation
+                    </button>
+                </div>
+
+                <!-- Live Chat Message Area -->
+                <div class="fintech-card p-4 min-h-[420px] max-h-[560px] flex flex-col">
+                    <div id="live-chat-messages" class="flex-1 overflow-y-auto space-y-3 pr-2 font-sans text-xs">
+                        <!-- Initial Greeting Message -->
+                        <div class="p-4 rounded-xl bg-violet-950/30 border border-violet-800/40 text-slate-200 space-y-1.5">
+                            <div class="flex items-center justify-between border-b border-violet-900/40 pb-1.5">
+                                <span class="font-bold text-violet-300 flex items-center gap-1.5 text-xs">
+                                    <span>🤖</span> AI Finance Controller Assistant
+                                </span>
+                                <span class="text-[10px] font-mono text-cyan-400">OpenRouter (liquid/lfm-2.5-2.6b:free)</span>
+                            </div>
+                            <p>Welcome to the <strong>Live AI Financial Controller Chat</strong>. I have direct access to your 120 reconciliation records, 65 flagged exceptions, and official Razorpay policies (<code>POL-PAY-001</code> through <code>POL-PAY-004</code>).</p>
+                            <p class="text-slate-400">Ask me about specific Order IDs, fee variance calculations, RAG policy citations, or batch resolution recommendations.</p>
+                        </div>
+                    </div>
+
+                    <!-- Chat Input Box -->
+                    <div class="pt-3 border-t border-slate-800 flex gap-2">
+                        <input type="text" id="live-chat-input" placeholder="Type your financial question (e.g. 'Why was ORD0056 flagged?' or 'Explain POL-PAY-001')..." class="flex-1 bg-slate-900 border border-slate-700 text-slate-200 px-4 py-2.5 rounded-xl text-xs focus:outline-none focus:border-violet-500 font-sans shadow-inner">
+                        <button id="live-chat-send-btn" onclick="submitLiveChat()" class="btn-shimmer text-white font-semibold text-xs px-5 py-2.5 rounded-xl shadow-lg transition hover:scale-105 active:scale-95 flex items-center gap-1.5">
+                            <span>Send</span> ➔
+                        </button>
+                    </div>
                 </div>
             </section>
 
