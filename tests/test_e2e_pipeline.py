@@ -15,6 +15,8 @@ def test_full_500_record_end_to_end_pipeline(tmp_path):
     bank_df = pd.read_csv(os.path.join(eval_dir, "bank_transactions_eval.csv"))
 
     ai_service = AIService()
+    from ai_agent.providers.mock_provider import MockAIProvider
+    ai_service.agent.provider = MockAIProvider()
     ai_service.audit_manager.file_path = str(tmp_path / "audit_log_e2e.json")
     ai_service.audit_manager.audit_logs = []
 

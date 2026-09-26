@@ -8,11 +8,22 @@ import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
+# Load environment variables from .env
+env_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), ".env")
+if os.path.exists(env_path):
+    with open(env_path, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if line and not line.startswith("#") and "=" in line:
+                k, v = line.split("=", 1)
+                os.environ.setdefault(k.strip(), v.strip())
+
 from backend.api.routes import router as api_router
 from backend.api.ai_routes import ai_router
 from backend.api.agent_routes import agent_router
 from backend.api.report_routes import report_router
 from backend.api.health_routes import health_router
+from backend.api.settings_routes import settings_router
 
 app = FastAPI(
     title="AI Finance Controller - Production Platform API",
@@ -35,6 +46,7 @@ app.include_router(api_router)
 app.include_router(ai_router)
 app.include_router(agent_router)
 app.include_router(report_router)
+app.include_router(settings_router)
 
 # Mount Dashboard static files
 dashboard_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "dashboard")

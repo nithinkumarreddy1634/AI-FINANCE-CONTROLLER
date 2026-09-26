@@ -17,7 +17,15 @@ class AIService:
     def __new__(cls):
         if cls._instance is None:
             cls._instance = super(AIService, cls).__new__(cls)
-            cls._instance.agent = AIFinanceControllerAgent()
+            import os
+            from ai_agent.providers.llm_provider import LLMAIProvider
+            from ai_agent.providers.mock_provider import MockAIProvider
+            openrouter_key = os.getenv("OPENROUTER_API_KEY")
+            if openrouter_key:
+                provider = LLMAIProvider(api_key=openrouter_key, provider_name="openrouter")
+            else:
+                provider = MockAIProvider()
+            cls._instance.agent = AIFinanceControllerAgent(provider=provider)
             cls._instance.audit_manager = AuditLogManager()
             cls._instance.recon_service = ReconciliationService()
             cls._instance.ai_investigations_cache: Dict[str, AIDecisionOutput] = {}
