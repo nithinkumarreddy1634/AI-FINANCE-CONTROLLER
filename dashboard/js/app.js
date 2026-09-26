@@ -77,14 +77,18 @@ async function initApp() {
     switchView('dashboard');
 }
 
+const API_BASE_URL = window.location.hostname.includes('vercel.app') 
+    ? 'https://ai-finance-controller-jnc0.onrender.com' 
+    : '';
+
 async function fetchAllData() {
     try {
         const [summaryRes, txnsRes, aiMetricsRes, aiInvestigationsRes, auditRes] = await Promise.all([
-            fetch('/summary'),
-            fetch('/transactions'),
-            fetch('/api/v1/ai/metrics'),
-            fetch('/api/v1/ai/investigations'),
-            fetch('/api/v1/reports/audit/json')
+            fetch(`${API_BASE_URL}/summary`),
+            fetch(`${API_BASE_URL}/transactions`),
+            fetch(`${API_BASE_URL}/api/v1/ai/metrics`),
+            fetch(`${API_BASE_URL}/api/v1/ai/investigations`),
+            fetch(`${API_BASE_URL}/api/v1/reports/audit/json`)
         ]);
 
         if (summaryRes.ok) state.summary = await summaryRes.json();
@@ -469,15 +473,15 @@ async function runDemoPipeline() {
         setStepStatus('step-val', 'done');
 
         setStepStatus('step-rules', 'active');
-        await fetch('/reconcile', { method: 'POST' });
+        await fetch(`${API_BASE_URL}/reconcile`, { method: 'POST' });
         setStepStatus('step-rules', 'done');
 
         setStepStatus('step-rag', 'active');
-        await fetch('/agent/rebuild-knowledge-base', { method: 'POST' });
+        await fetch(`${API_BASE_URL}/agent/rebuild-knowledge-base`, { method: 'POST' });
         setStepStatus('step-rag', 'done');
 
         setStepStatus('step-ai', 'active');
-        await fetch('/agent/investigations');
+        await fetch(`${API_BASE_URL}/agent/investigations`);
         setStepStatus('step-ai', 'done');
 
         setStepStatus('step-audit', 'active');
@@ -520,7 +524,7 @@ async function uploadAndReconcileCSVs() {
     formData.append('bank_file', bankFile);
 
     try {
-        const res = await fetch('/reconcile', { method: 'POST', body: formData });
+        const res = await fetch(`${API_BASE_URL}/reconcile`, { method: 'POST', body: formData });
         if (res.ok) {
             await fetchAllData();
             switchView('dashboard');
@@ -537,9 +541,9 @@ async function uploadAndReconcileCSVs() {
 async function openInvestigationModal(orderId) {
     try {
         const [txnRes, agentRes, auditRes] = await Promise.all([
-            fetch(`/transactions?search=${encodeURIComponent(orderId)}`),
-            fetch(`/agent/investigate/${encodeURIComponent(orderId)}`, { method: 'POST' }),
-            fetch(`/api/v1/audit/${encodeURIComponent(orderId)}`)
+            fetch(`${API_BASE_URL}/transactions?search=${encodeURIComponent(orderId)}`),
+            fetch(`${API_BASE_URL}/agent/investigate/${encodeURIComponent(orderId)}`, { method: 'POST' }),
+            fetch(`${API_BASE_URL}/api/v1/audit/${encodeURIComponent(orderId)}`)
         ]);
 
         if (!agentRes.ok) return;
@@ -678,7 +682,7 @@ async function submitHumanReview() {
     }
 
     try {
-        const res = await fetch(`/api/v1/ai/investigations/${state.currentInvestigationId}/review`, {
+        const res = await fetch(`${API_BASE_URL}/api/v1/ai/investigations/${state.currentInvestigationId}/review`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
