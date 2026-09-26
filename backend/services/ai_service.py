@@ -122,8 +122,24 @@ class AIService:
         import json
         import urllib.request
 
+        # Ensure API key is found from environment or .env file
         api_key = os.getenv("OPENROUTER_API_KEY")
-        model = os.getenv("OPENROUTER_MODEL", "liquid/lfm-2.5-2.6b:free")
+        if not api_key:
+            try:
+                env_file = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), ".env")
+                if os.path.exists(env_file):
+                    with open(env_file, "r", encoding="utf-8") as f:
+                        for line in f:
+                            line_s = line.strip()
+                            if line_s.startswith("OPENROUTER_API_KEY="):
+                                api_key = line_s.split("=", 1)[1].strip().strip('"\'')
+                                os.environ["OPENROUTER_API_KEY"] = api_key
+                                break
+            except Exception:
+                pass
+
+        primary_model = os.getenv("OPENROUTER_MODEL", "liquid/lfm-2.5-2.6b:free")
+        models_to_try = [primary_model, "openrouter/auto"]
         summary = self.recon_service.latest_summary or {}
 
         sys_context = f"""You are the AI Finance Controller Copilot for Razorpay Autonomous Reconciliation.
@@ -142,37 +158,38 @@ Always reference official policies when relevant:
 - POL-PAY-004: Duplicate transaction references must be flagged for fraud prevention.
 """
         if api_key:
-            try:
-                req_body = {
-                    "model": model,
-                    "messages": [
-                        {"role": "system", "content": sys_context},
-                        {"role": "user", "content": prompt}
-                    ],
-                    "temperature": 0.2
-                }
-                req = urllib.request.Request(
-                    "https://openrouter.ai/api/v1/chat/completions",
-                    headers={
-                        "Authorization": f"Bearer {api_key}",
-                        "Content-Type": "application/json",
-                        "HTTP-Referer": "https://ai-finance-controller.vercel.app",
-                        "X-Title": "AI Finance Controller"
-                    },
-                    data=json.dumps(req_body).encode("utf-8")
-                )
-                with urllib.request.urlopen(req, timeout=12) as resp:
-                    data = json.loads(resp.read().decode("utf-8"))
-                    content = data["choices"][0]["message"]["content"]
-                    tokens = data.get("usage", {}).get("total_tokens", 0)
-                    return {
-                        "reply": content,
-                        "model": model,
-                        "tokens": tokens,
-                        "provider": "OpenRouter AI (Live)"
+            for model_name in models_to_try:
+                try:
+                    req_body = {
+                        "model": model_name,
+                        "messages": [
+                            {"role": "system", "content": sys_context},
+                            {"role": "user", "content": prompt}
+                        ],
+                        "temperature": 0.2
                     }
-            except Exception as e:
-                pass
+                    req = urllib.request.Request(
+                        "https://openrouter.ai/api/v1/chat/completions",
+                        headers={
+                            "Authorization": f"Bearer {api_key}",
+                            "Content-Type": "application/json",
+                            "HTTP-Referer": "https://ai-finance-controller.vercel.app",
+                            "X-Title": "AI Finance Controller"
+                        },
+                        data=json.dumps(req_body).encode("utf-8")
+                    )
+                    with urllib.request.urlopen(req, timeout=14) as resp:
+                        data = json.loads(resp.read().decode("utf-8"))
+                        content = data["choices"][0]["message"]["content"]
+                        tokens = data.get("usage", {}).get("total_tokens", 0)
+                        return {
+                            "reply": content,
+                            "model": model_name,
+                            "tokens": tokens,
+                            "provider": "OpenRouter AI (Live)"
+                        }
+                except Exception as e:
+                    continue
 
         # High-precision deterministic fallback
         q_lower = prompt.lower()

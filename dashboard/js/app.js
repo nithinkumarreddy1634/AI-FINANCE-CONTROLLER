@@ -1499,6 +1499,264 @@ function showToast(message, type = 'info') {
     }, 3500);
 }
 
+// ==========================================
+// Live AI Chat & Global AI Copilot Engine
+// ==========================================
+
+// Tab 6: Live AI Chat View
+function renderChatView() {
+    const container = document.getElementById('live-chat-messages');
+    if (container) {
+        container.scrollTop = container.scrollHeight;
+    }
+    const input = document.getElementById('live-chat-input');
+    if (input) {
+        setTimeout(() => input.focus(), 100);
+    }
+}
+
+// Toggle Floating AI Copilot Slide-over
+function toggleAICopilot() {
+    const drawer = document.getElementById('ai-copilot-drawer');
+    if (!drawer) return;
+    drawer.classList.toggle('closed');
+    if (!drawer.classList.contains('closed')) {
+        const input = document.getElementById('copilot-user-input');
+        if (input) setTimeout(() => input.focus(), 150);
+    }
+}
+
+// Copilot Quick Prompt Helper
+function sendCopilotQuickPrompt(promptText) {
+    const input = document.getElementById('copilot-user-input');
+    if (input) {
+        input.value = promptText;
+        sendCopilotMessage();
+    }
+}
+
+// Send Copilot Drawer Message
+async function sendCopilotMessage() {
+    const input = document.getElementById('copilot-user-input');
+    const log = document.getElementById('copilot-chat-log');
+    const sendBtn = document.getElementById('copilot-send-btn');
+    if (!input || !log) return;
+
+    const message = input.value.trim();
+    if (!message) return;
+
+    // Append User Message
+    const userBubble = document.createElement('div');
+    userBubble.className = 'p-3 rounded-xl bg-violet-600/20 border border-violet-500/40 text-slate-100 ml-6 space-y-1';
+    userBubble.innerHTML = `
+        <div class="flex items-center justify-between text-[10px] text-violet-300 font-semibold mb-0.5">
+            <span>You</span>
+            <span>${new Date().toLocaleTimeString()}</span>
+        </div>
+        <p class="leading-relaxed">${escapeHtml(message)}</p>
+    `;
+    log.appendChild(userBubble);
+    input.value = '';
+
+    // Append AI Loading Indicator
+    const loadingId = `copilot-load-${Date.now()}`;
+    const loadingBubble = document.createElement('div');
+    loadingBubble.id = loadingId;
+    loadingBubble.className = 'p-3 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 mr-6 space-y-1';
+    loadingBubble.innerHTML = `
+        <div class="flex items-center gap-2 text-violet-400 font-semibold text-[11px]">
+            <span class="animate-spin">🔄</span> Copilot querying OpenRouter AI...
+        </div>
+    `;
+    log.appendChild(loadingBubble);
+    log.scrollTop = log.scrollHeight;
+
+    if (sendBtn) sendBtn.disabled = true;
+
+    try {
+        const response = await fetch(`${API_BASE_URL}/api/v1/ai/copilot-chat`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ prompt: message })
+        });
+        const data = await response.json();
+        const loadEl = document.getElementById(loadingId);
+        if (loadEl) loadEl.remove();
+
+        const aiBubble = document.createElement('div');
+        aiBubble.className = 'p-3.5 rounded-xl bg-slate-900/90 border border-violet-500/30 text-slate-100 mr-6 space-y-1.5 shadow-lg';
+        aiBubble.innerHTML = `
+            <div class="flex items-center justify-between text-[10px] border-b border-slate-800 pb-1 mb-1 text-slate-400">
+                <span class="font-bold text-violet-300 flex items-center gap-1">✨ ${escapeHtml(data.provider || 'OpenRouter AI')}</span>
+                <span class="font-mono text-cyan-400 text-[10px]">${escapeHtml(data.model || 'liquid/lfm-2.5-2.6b:free')}</span>
+            </div>
+            <div class="text-xs leading-relaxed whitespace-pre-wrap">${formatMarkdownToHtml(data.reply || '')}</div>
+        `;
+        log.appendChild(aiBubble);
+    } catch (err) {
+        const loadEl = document.getElementById(loadingId);
+        if (loadEl) loadEl.remove();
+        const errBubble = document.createElement('div');
+        errBubble.className = 'p-3 rounded-xl bg-rose-950/40 border border-rose-800/40 text-rose-300 mr-6 text-xs';
+        errBubble.textContent = `Error connecting to AI Copilot: ${err.message}. Please verify network connectivity.`;
+        log.appendChild(errBubble);
+    } finally {
+        if (sendBtn) sendBtn.disabled = false;
+        log.scrollTop = log.scrollHeight;
+    }
+}
+
+// Live Chat Suggested Prompt Trigger
+function sendLiveChatMessage(promptText) {
+    const input = document.getElementById('live-chat-input');
+    if (input) {
+        input.value = promptText;
+        submitLiveChat();
+    }
+}
+
+// Submit Live AI Chat Message (Full View)
+async function submitLiveChat() {
+    const input = document.getElementById('live-chat-input');
+    const container = document.getElementById('live-chat-messages');
+    const sendBtn = document.getElementById('live-chat-send-btn');
+    if (!input || !container) return;
+
+    const message = input.value.trim();
+    if (!message) return;
+
+    // Append User Message
+    const userBubble = document.createElement('div');
+    userBubble.className = 'p-4 rounded-xl bg-violet-600/25 border border-violet-500/40 text-slate-100 ml-12 space-y-1 shadow-md';
+    userBubble.innerHTML = `
+        <div class="flex items-center justify-between text-xs text-violet-300 font-semibold mb-1">
+            <span class="flex items-center gap-1.5">👤 <span>You</span></span>
+            <span class="text-[10px] font-mono text-slate-400">${new Date().toLocaleTimeString()}</span>
+        </div>
+        <p class="leading-relaxed text-xs">${escapeHtml(message)}</p>
+    `;
+    container.appendChild(userBubble);
+    input.value = '';
+
+    // Append AI Loading Indicator
+    const loadingId = `live-load-${Date.now()}`;
+    const loadingBubble = document.createElement('div');
+    loadingBubble.id = loadingId;
+    loadingBubble.className = 'p-4 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 mr-12 space-y-1';
+    loadingBubble.innerHTML = `
+        <div class="flex items-center gap-2.5 text-cyan-400 font-semibold text-xs">
+            <span class="animate-spin text-base">🔄</span> OpenRouter AI is analyzing 3-way reconciliation data...
+        </div>
+    `;
+    container.appendChild(loadingBubble);
+    container.scrollTop = container.scrollHeight;
+
+    if (sendBtn) sendBtn.disabled = true;
+
+    try {
+        const response = await fetch(`${API_BASE_URL}/api/v1/ai/copilot-chat`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ prompt: message })
+        });
+        const data = await response.json();
+        const loadEl = document.getElementById(loadingId);
+        if (loadEl) loadEl.remove();
+
+        const aiBubble = document.createElement('div');
+        aiBubble.className = 'p-4 rounded-xl bg-slate-900/90 border border-violet-500/30 text-slate-100 mr-12 space-y-2 shadow-xl';
+        aiBubble.innerHTML = `
+            <div class="flex items-center justify-between border-b border-slate-800 pb-2 text-xs">
+                <span class="font-bold text-violet-300 flex items-center gap-1.5">
+                    <span>🤖</span> ${escapeHtml(data.provider || 'OpenRouter AI (Live)')}
+                </span>
+                <div class="flex items-center gap-2">
+                    <span class="px-2 py-0.5 rounded-full bg-cyan-950/60 text-cyan-300 text-[10px] font-mono border border-cyan-800/40">
+                        ${escapeHtml(data.model || 'liquid/lfm-2.5-2.6b:free')}
+                    </span>
+                    <button onclick="navigator.clipboard.writeText(this.closest('.p-4').querySelector('.reply-content').innerText); showToast('Response copied to clipboard!', 'success');" class="text-[11px] text-slate-400 hover:text-cyan-300 transition" title="Copy reply">
+                        📋
+                    </button>
+                </div>
+            </div>
+            <div class="reply-content text-xs leading-relaxed space-y-2 font-sans">${formatMarkdownToHtml(data.reply || '')}</div>
+        `;
+        container.appendChild(aiBubble);
+    } catch (err) {
+        const loadEl = document.getElementById(loadingId);
+        if (loadEl) loadEl.remove();
+        const errBubble = document.createElement('div');
+        errBubble.className = 'p-4 rounded-xl bg-rose-950/40 border border-rose-800/40 text-rose-300 mr-12 text-xs';
+        errBubble.textContent = `Failed to receive live AI response: ${err.message}.`;
+        container.appendChild(errBubble);
+    } finally {
+        if (sendBtn) sendBtn.disabled = false;
+        container.scrollTop = container.scrollHeight;
+    }
+}
+
+// Clear Live Chat Messages
+function clearChatMessages() {
+    const container = document.getElementById('live-chat-messages');
+    if (!container) return;
+    container.innerHTML = `
+        <div class="p-4 rounded-xl bg-violet-950/30 border border-violet-800/40 text-slate-200 space-y-1.5">
+            <div class="flex items-center justify-between border-b border-violet-900/40 pb-1.5">
+                <span class="font-bold text-violet-300 flex items-center gap-1.5 text-xs">
+                    <span>🤖</span> AI Finance Controller Assistant
+                </span>
+                <span class="text-[10px] font-mono text-cyan-400">OpenRouter (liquid/lfm-2.5-2.6b:free)</span>
+            </div>
+            <p>Welcome to the <strong>Live AI Financial Controller Chat</strong>. I have direct access to your 120 reconciliation records, 65 flagged exceptions, and official Razorpay policies (<code>POL-PAY-001</code> through <code>POL-PAY-004</code>).</p>
+            <p class="text-slate-400">Ask me about specific Order IDs, fee variance calculations, RAG policy citations, or batch resolution recommendations.</p>
+        </div>
+    `;
+    showToast('Chat history cleared', 'info');
+}
+
+// Export Chat Transcript as File
+function exportChatTranscript() {
+    const container = document.getElementById('live-chat-messages');
+    if (!container) return;
+    const text = container.innerText;
+    const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `ai-finance-chat-transcript-${new Date().toISOString().slice(0, 10)}.txt`;
+    a.click();
+    URL.revokeObjectURL(a);
+    showToast('Chat transcript exported!', 'success');
+}
+
+// Theme Switcher
+function toggleTheme(themeName) {
+    document.body.classList.remove('theme-aurora', 'theme-sunset', 'theme-emerald');
+    if (themeName && themeName !== 'aurora') {
+        document.body.classList.add(`theme-${themeName}`);
+    }
+    localStorage.setItem('recon-theme', themeName);
+}
+
+// Simple Markdown Formatter for AI output
+function formatMarkdownToHtml(markdown) {
+    if (!markdown) return '';
+    let html = escapeHtml(markdown);
+    // Bold
+    html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    // Inline code
+    html = html.replace(/`([^`]+)`/g, '<code class="px-1.5 py-0.5 rounded bg-slate-800 text-cyan-300 font-mono text-[11px]">$1</code>');
+    // Headers ###
+    html = html.replace(/^### (.*$)/gim, '<h4 class="font-bold text-violet-300 text-xs mt-2 mb-1">$1</h4>');
+    html = html.replace(/^## (.*$)/gim, '<h3 class="font-bold text-cyan-300 text-sm mt-3 mb-1">$1</h3>');
+    // Bullet list items
+    html = html.replace(/^\- (.*$)/gim, '<li class="ml-4 list-disc text-slate-300">$1</li>');
+    html = html.replace(/^\* (.*$)/gim, '<li class="ml-4 list-disc text-slate-300">$1</li>');
+    // Line breaks
+    html = html.replace(/\n\n/g, '<br><br>');
+    return html;
+}
+
 // Keyboard shortcuts & listeners for AI Copilot and Live Chat
 document.addEventListener('DOMContentLoaded', () => {
     const copilotInput = document.getElementById('copilot-user-input');
@@ -1524,4 +1782,5 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedTheme = localStorage.getItem('recon-theme') || 'aurora';
     toggleTheme(savedTheme);
 });
+
 

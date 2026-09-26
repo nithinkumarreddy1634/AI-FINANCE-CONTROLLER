@@ -19,7 +19,22 @@ from ai_agent.providers.mock_provider import MockAIProvider
 
 class LLMAIProvider(AIProvider):
     def __init__(self, api_key: Optional[str] = None, provider_name: str = "openrouter", model: Optional[str] = None):
-        self.api_key = api_key or os.getenv("OPENROUTER_API_KEY") or os.getenv("OPENAI_API_KEY") or os.getenv("GEMINI_API_KEY")
+        resolved_key = api_key or os.getenv("OPENROUTER_API_KEY") or os.getenv("OPENAI_API_KEY") or os.getenv("GEMINI_API_KEY")
+        if not resolved_key:
+            try:
+                env_file = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), ".env")
+                if os.path.exists(env_file):
+                    with open(env_file, "r", encoding="utf-8") as f:
+                        for line in f:
+                            line_s = line.strip()
+                            if line_s.startswith("OPENROUTER_API_KEY="):
+                                resolved_key = line_s.split("=", 1)[1].strip().strip('"\'')
+                                os.environ["OPENROUTER_API_KEY"] = resolved_key
+                                break
+            except Exception:
+                pass
+
+        self.api_key = resolved_key
         self.provider_name = provider_name
         self.model = model or os.getenv("OPENROUTER_MODEL", "liquid/lfm-2.5-2.6b:free")
         self.fallback_provider = MockAIProvider()
