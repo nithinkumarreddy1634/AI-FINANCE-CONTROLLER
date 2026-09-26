@@ -42,6 +42,27 @@ document.addEventListener('DOMContentLoaded', () => {
         if (state.currentView === 'transactions') renderExplorer();
     });
 
+    // Keyboard shortcuts
+    document.addEventListener('keydown', (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+            e.preventDefault();
+            const searchInput = document.getElementById('topbar-search');
+            if (searchInput) searchInput.focus();
+        } else if (e.altKey && (e.key === 'r' || e.key === 'R')) {
+            e.preventDefault();
+            runDemoPipeline();
+        }
+    });
+});
+
+function toggleTheme(theme) {
+    if (theme === 'emerald') {
+        document.body.classList.add('theme-emerald');
+    } else {
+        document.body.classList.remove('theme-emerald');
+    }
+}
+
     document.getElementById('explorer-search').addEventListener('input', (e) => {
         state.explorer.search = e.target.value;
         state.explorer.currentPage = 1;
