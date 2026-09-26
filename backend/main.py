@@ -48,10 +48,19 @@ app.include_router(agent_router)
 app.include_router(report_router)
 app.include_router(settings_router)
 
+class SafeStaticFiles(StaticFiles):
+    async def __call__(self, scope, receive, send):
+        if scope["type"] == "websocket":
+            await send({"type": "websocket.close", "code": 1000})
+            return
+        if scope["type"] != "http":
+            return
+        await super().__call__(scope, receive, send)
+
 # Mount Dashboard static files
 dashboard_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "dashboard")
 if os.path.exists(dashboard_dir):
-    app.mount("/", StaticFiles(directory=dashboard_dir, html=True), name="dashboard")
+    app.mount("/", SafeStaticFiles(directory=dashboard_dir, html=True), name="dashboard")
 
 if __name__ == "__main__":
     import uvicorn
