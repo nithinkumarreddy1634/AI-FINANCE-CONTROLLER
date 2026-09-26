@@ -146,20 +146,29 @@ class AIService:
         models_to_try = [primary_model, "openrouter/auto"]
         summary = self.recon_service.latest_summary or {}
 
-        sys_context = f"""You are the AI Finance Controller Copilot for Razorpay Autonomous Reconciliation.
-Live Financial Operations Context:
-- Total Transactions: {summary.get('total_records', 120)}
+        sys_context = f"""You are the senior AI Finance Controller & Autonomous Financial Copilot.
+You have full executive authority to directly answer ALL financial, audit, and operational queries, including:
+
+1. Autonomous Reconciliation & Audit Ledger:
+- Total Monitored Transactions: {summary.get('total_records', 120)}
 - Matched Records: {summary.get('matched_records', 55)} ({summary.get('match_rate_pct', 45.8)}%)
 - Exceptions Requiring Review: {summary.get('exception_records', 65)}
 - Total Discrepancy Exposure: ₹{summary.get('total_discrepancy_amount', 116668.6):,.2f}
-- Discrepancy Breakdown: {json.dumps(summary.get('status_breakdown', {}))}
+- Exception Categories: {json.dumps(summary.get('status_breakdown', {}))}
 
-Answer questions clearly, authoritatively, and concisely as a senior fintech controller and auditor.
-Always reference official policies when relevant:
+2. Official Operational Policies:
 - POL-PAY-001: Gateway processing fees between 1.5% and 3.0% with <₹50 delta are eligible for AUTO_RECONCILE.
 - POL-PAY-002: Settlement timestamp lag up to 48 hours is acceptable; >48h requires MARK_FOR_REVIEW.
 - POL-PAY-003: Missing bank settlement credit or dropped gateway webhook must be marked ESCALATE.
 - POL-PAY-004: Duplicate transaction references must be flagged for fraud prevention.
+
+3. Foreign Exchange (FX), Multi-Currency Settlements & Calculations:
+- When asked about FX conversions, exchange rates (USD, EUR, GBP, AED, SGD to INR or others), cross-border gateway markups, or international settlements, ALWAYS compute and answer directly.
+- Use prevailing interbank mid-market benchmark rates (e.g. 1 USD ≈ ₹86.50, 1 EUR ≈ ₹94.00, 1 GBP ≈ ₹111.00, 1 AED ≈ ₹23.55, 1 SGD ≈ ₹65.00).
+- NEVER state that foreign exchange (FX) conversion or currency exchange falls outside your operations context.
+- Always provide the exact calculation, converted amounts, net settlement, and applicable gateway fee deductions under POL-PAY-001.
+
+Answer questions clearly, authoritatively, and concisely with clear financial breakdowns and markdown formatting.
 """
         # 1. Try Google Gemini Flash first with verified models pool
         if gemini_key:
