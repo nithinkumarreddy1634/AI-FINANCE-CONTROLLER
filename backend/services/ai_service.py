@@ -122,19 +122,23 @@ class AIService:
         import json
         import urllib.request
 
-        # Ensure API key is found from environment or .env file
-        api_key = os.getenv("OPENROUTER_API_KEY")
-        if not api_key:
+        # Ensure API keys are found from environment or .env file
+        openrouter_key = os.getenv("OPENROUTER_API_KEY")
+        gemini_key = os.getenv("GEMINI_API_KEY")
+
+        if not openrouter_key or not gemini_key:
             try:
                 env_file = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), ".env")
                 if os.path.exists(env_file):
                     with open(env_file, "r", encoding="utf-8") as f:
                         for line in f:
                             line_s = line.strip()
-                            if line_s.startswith("OPENROUTER_API_KEY="):
-                                api_key = line_s.split("=", 1)[1].strip().strip('"\'')
-                                os.environ["OPENROUTER_API_KEY"] = api_key
-                                break
+                            if line_s.startswith("OPENROUTER_API_KEY=") and not openrouter_key:
+                                openrouter_key = line_s.split("=", 1)[1].strip().strip('"\'')
+                                os.environ["OPENROUTER_API_KEY"] = openrouter_key
+                            elif line_s.startswith("GEMINI_API_KEY=") and not gemini_key:
+                                gemini_key = line_s.split("=", 1)[1].strip().strip('"\'')
+                                os.environ["GEMINI_API_KEY"] = gemini_key
             except Exception:
                 pass
 
@@ -157,7 +161,40 @@ Always reference official policies when relevant:
 - POL-PAY-003: Missing bank settlement credit or dropped gateway webhook must be marked ESCALATE.
 - POL-PAY-004: Duplicate transaction references must be flagged for fraud prevention.
 """
-        if api_key:
+        # 1. Try Google Gemini 3.8 Flash first if configured
+        if gemini_key:
+            try:
+                gemini_url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent?key={gemini_key}"
+                gemini_body = {
+                    "contents": [{
+                        "parts": [
+                            {"text": f"System Directive:\n{sys_context}\n\nUser Question:\n{prompt}"}
+                        ]
+                    }],
+                    "generationConfig": {
+                        "temperature": 0.2
+                    }
+                }
+                g_req = urllib.request.Request(
+                    gemini_url,
+                    headers={"Content-Type": "application/json"},
+                    data=json.dumps(gemini_body).encode("utf-8")
+                )
+                with urllib.request.urlopen(g_req, timeout=12) as g_resp:
+                    g_data = json.loads(g_resp.read().decode("utf-8"))
+                    content = g_data["candidates"][0]["content"]["parts"][0]["text"].strip()
+                    tokens = g_data.get("usageMetadata", {}).get("totalTokenCount", 0)
+                    return {
+                        "reply": content,
+                        "model": "gemini-3.8-flash",
+                        "tokens": tokens,
+                        "provider": "Google Gemini 3.8 Flash (Live)"
+                    }
+            except Exception:
+                pass
+
+        # 2. Try OpenRouter AI
+        if openrouter_key:
             for model_name in models_to_try:
                 try:
                     req_body = {
@@ -171,7 +208,7 @@ Always reference official policies when relevant:
                     req = urllib.request.Request(
                         "https://openrouter.ai/api/v1/chat/completions",
                         headers={
-                            "Authorization": f"Bearer {api_key}",
+                            "Authorization": f"Bearer {openrouter_key}",
                             "Content-Type": "application/json",
                             "HTTP-Referer": "https://ai-finance-controller.vercel.app",
                             "X-Title": "AI Finance Controller"
@@ -188,7 +225,7 @@ Always reference official policies when relevant:
                             "tokens": tokens,
                             "provider": "OpenRouter AI (Live)"
                         }
-                except Exception as e:
+                except Exception:
                     continue
 
         # High-precision deterministic fallback

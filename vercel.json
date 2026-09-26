@@ -1,15 +1,11 @@
 {
   "version": 2,
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/index.py" },
-    { "source": "/summary", "destination": "/api/index.py" },
-    { "source": "/transactions", "destination": "/api/index.py" },
-    { "source": "/health", "destination": "/api/index.py" },
-    { "source": "/reconcile", "destination": "/api/index.py" },
-    { "source": "/reconcile-csv", "destination": "/api/index.py" },
-    { "source": "/css/(.*)", "destination": "/dashboard/css/$1" },
-    { "source": "/js/(.*)", "destination": "/dashboard/js/$1" },
-    { "source": "/", "destination": "/dashboard/index.html" },
-    { "source": "/(.*)", "destination": "/dashboard/$1" }
+    { "source": "/api/(.*)", "destination": "https://ai-finance-controller-jnc0.onrender.com/api/$1" },
+    { "source": "/summary", "destination": "https://ai-finance-controller-jnc0.onrender.com/summary" },
+    { "source": "/transactions", "destination": "https://ai-finance-controller-jnc0.onrender.com/transactions" },
+    { "source": "/health", "destination": "https://ai-finance-controller-jnc0.onrender.com/health" },
+    { "source": "/reconcile", "destination": "https://ai-finance-controller-jnc0.onrender.com/reconcile" },
+    { "source": "/reconcile-csv", "destination": "https://ai-finance-controller-jnc0.onrender.com/reconcile-csv" }
   ]
 }
