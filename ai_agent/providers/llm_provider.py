@@ -21,7 +21,7 @@ class LLMAIProvider(AIProvider):
     def __init__(self, api_key: Optional[str] = None, provider_name: str = "openrouter", model: Optional[str] = None):
         self.api_key = api_key or os.getenv("OPENROUTER_API_KEY") or os.getenv("OPENAI_API_KEY") or os.getenv("GEMINI_API_KEY")
         self.provider_name = provider_name
-        self.model = model or os.getenv("OPENROUTER_MODEL", "openrouter/auto")
+        self.model = model or os.getenv("OPENROUTER_MODEL", "liquid/lfm-2.5-2.6b:free")
         self.fallback_provider = MockAIProvider()
 
     def investigate(self, evidence: EvidencePackage) -> AIDecisionOutput:

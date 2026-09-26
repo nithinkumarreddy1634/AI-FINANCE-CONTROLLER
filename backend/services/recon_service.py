@@ -20,9 +20,10 @@ class ReconciliationService:
             cls._instance.latest_results: List[ReconciliationResultRecord] = []
             cls._instance.latest_summary: Dict[str, Any] = {}
             cls._instance.validation_errors: List[ValidationError] = []
-            cls._instance.data_dir = "data"
-            cls._instance.results_csv_path = os.path.join("data", "reconciliation_results.csv")
-            # Run initial reconciliation if default datasets exist
+            root_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+            cls._instance.data_dir = os.path.join(root_dir, "data")
+            cls._instance.results_csv_path = os.path.join(cls._instance.data_dir, "reconciliation_results.csv")
+            # Run initial reconciliation so metrics and transactions are never empty
             cls._instance.initialize_default_run()
         return cls._instance
 
@@ -35,7 +36,11 @@ class ReconciliationService:
             orders_df = pd.read_csv(orders_p)
             payments_df = pd.read_csv(payments_p)
             bank_df = pd.read_csv(bank_p)
-            self.run_reconciliation(orders_df, payments_df, bank_df)
+        else:
+            from data.generator import generate_synthetic_data
+            orders_df, payments_df, bank_df = generate_synthetic_data(num_orders=120)
+
+        self.run_reconciliation(orders_df, payments_df, bank_df)
 
     def run_reconciliation(
         self,
