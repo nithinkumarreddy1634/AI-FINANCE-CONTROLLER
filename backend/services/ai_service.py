@@ -161,37 +161,39 @@ Always reference official policies when relevant:
 - POL-PAY-003: Missing bank settlement credit or dropped gateway webhook must be marked ESCALATE.
 - POL-PAY-004: Duplicate transaction references must be flagged for fraud prevention.
 """
-        # 1. Try Google Gemini 3.8 Flash first if configured
+        # 1. Try Google Gemini Flash first with verified models pool
         if gemini_key:
-            try:
-                gemini_url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent?key={gemini_key}"
-                gemini_body = {
-                    "contents": [{
-                        "parts": [
-                            {"text": f"System Directive:\n{sys_context}\n\nUser Question:\n{prompt}"}
-                        ]
-                    }],
-                    "generationConfig": {
-                        "temperature": 0.2
+            gemini_models = ["gemini-3.5-flash-lite", "gemini-flash-latest", "gemini-3.5-flash"]
+            for g_model in gemini_models:
+                try:
+                    gemini_url = f"https://generativelanguage.googleapis.com/v1beta/models/{g_model}:generateContent?key={gemini_key}"
+                    gemini_body = {
+                        "contents": [{
+                            "parts": [
+                                {"text": f"System Directive:\n{sys_context}\n\nUser Question:\n{prompt}"}
+                            ]
+                        }],
+                        "generationConfig": {
+                            "temperature": 0.2
+                        }
                     }
-                }
-                g_req = urllib.request.Request(
-                    gemini_url,
-                    headers={"Content-Type": "application/json"},
-                    data=json.dumps(gemini_body).encode("utf-8")
-                )
-                with urllib.request.urlopen(g_req, timeout=12) as g_resp:
-                    g_data = json.loads(g_resp.read().decode("utf-8"))
-                    content = g_data["candidates"][0]["content"]["parts"][0]["text"].strip()
-                    tokens = g_data.get("usageMetadata", {}).get("totalTokenCount", 0)
-                    return {
-                        "reply": content,
-                        "model": "gemini-3.8-flash",
-                        "tokens": tokens,
-                        "provider": "Google Gemini 3.8 Flash (Live)"
-                    }
-            except Exception:
-                pass
+                    g_req = urllib.request.Request(
+                        gemini_url,
+                        headers={"Content-Type": "application/json"},
+                        data=json.dumps(gemini_body).encode("utf-8")
+                    )
+                    with urllib.request.urlopen(g_req, timeout=8) as g_resp:
+                        g_data = json.loads(g_resp.read().decode("utf-8"))
+                        content = g_data["candidates"][0]["content"]["parts"][0]["text"].strip()
+                        tokens = g_data.get("usageMetadata", {}).get("totalTokenCount", 0)
+                        return {
+                            "reply": content,
+                            "model": g_model,
+                            "tokens": tokens,
+                            "provider": "Google Gemini (Live)"
+                        }
+                except Exception:
+                    continue
 
         # 2. Try OpenRouter AI
         if openrouter_key:

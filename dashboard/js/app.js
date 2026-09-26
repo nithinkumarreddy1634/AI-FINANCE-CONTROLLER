@@ -1462,7 +1462,7 @@ Answer questions authoritatively, concisely, and clearly as a senior fintech con
 
     // 2. Direct Browser Google Gemini 3.8 Flash Call
     try {
-        const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent?key=${GEMINI_DIRECT_KEY}`;
+        const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=${GEMINI_DIRECT_KEY}`;
         const gRes = await fetch(geminiUrl, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -1479,8 +1479,8 @@ Answer questions authoritatively, concisely, and clearly as a senior fintech con
             if (reply) {
                 return {
                     reply: reply,
-                    model: 'gemini-3.8-flash',
-                    provider: 'Google Gemini 3.8 Flash (Live)',
+                    model: 'gemini-3.5-flash-lite',
+                    provider: 'Google Gemini (Live)',
                     tokens: gData.usageMetadata?.totalTokenCount || 0
                 };
             }
