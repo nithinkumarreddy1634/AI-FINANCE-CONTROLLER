@@ -9,9 +9,11 @@ from knowledge.vector_store import VectorStore
 from backend.services.ai_service import AIService
 
 health_router = APIRouter(prefix="/health", tags=["System & Component Health"])
+api_health_router = APIRouter(prefix="/api/health", tags=["System & Component Health"])
 ai_service = AIService()
 
 @health_router.get("", summary="General Health Check")
+@api_health_router.get("", summary="General Health Check API Alias")
 def get_general_health():
     return {
         "status": "OPERATIONAL",

@@ -22,7 +22,7 @@ from backend.api.routes import router as api_router
 from backend.api.ai_routes import ai_router
 from backend.api.agent_routes import agent_router
 from backend.api.report_routes import report_router
-from backend.api.health_routes import health_router
+from backend.api.health_routes import health_router, api_health_router
 from backend.api.settings_routes import settings_router
 
 app = FastAPI(
@@ -42,6 +42,7 @@ app.add_middleware(
 
 # Include API routers
 app.include_router(health_router)
+app.include_router(api_health_router)
 app.include_router(api_router)
 app.include_router(ai_router)
 app.include_router(agent_router)
